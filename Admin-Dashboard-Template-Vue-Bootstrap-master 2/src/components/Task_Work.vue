@@ -15,31 +15,31 @@
                     <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                   <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <mdb-icon icon="bookmark" />
+                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                   <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <mdb-icon icon="bookmark" />
+                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                   <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <mdb-icon icon="bookmark" />
+                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                   <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <mdb-icon icon="bookmark" />
+                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                   <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <mdb-icon icon="bookmark" />
+                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                   <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <mdb-icon icon="bookmark" />
+                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                   <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <mdb-icon icon="bookmark" />
+                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                   <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <mdb-icon icon="bookmark" />
+                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                   <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <mdb-icon icon="bookmark" />
+                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                   </mdb-btn>
                 </mdb-btn-group>
                 </div>
