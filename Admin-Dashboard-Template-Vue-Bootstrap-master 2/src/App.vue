@@ -2,26 +2,19 @@
   <div class="flexible-content">
     <!--Navbar-->
     <mdb-navbar class="flexible-navbar white" light position="top" scrolling>
-      <mdb-navbar-brand href="https://mdbootstrap.com/docs/vue/" target="_blank">MDB</mdb-navbar-brand>
+      <mdb-navbar-brand target="_blank"><img alt="" class="img-fluid" src="./assets/D-Trainee.png"/></mdb-navbar-brand>
       <mdb-navbar-toggler>
-        <mdb-navbar-nav left>
-          <mdb-nav-item to="/" waves-fixed active class="active">Home</mdb-nav-item>
-          <mdb-nav-item href="https://mdbootstrap.com/docs/vue/getting-started/quick-start/" waves-fixed>About MDB</mdb-nav-item>
-          <mdb-nav-item href="https://mdbootstrap.com/docs/vue/getting-started/download/" waves-fixed>Free download</mdb-nav-item>
-          <mdb-nav-item href="https://mdbootstrap.com/education/bootstrap/" waves-fixed>Free tutorials</mdb-nav-item>
-        </mdb-navbar-nav>
         <mdb-navbar-nav right>
-          <mdb-nav-item href="#!" waves-fixed><mdb-icon fab class="text-black" icon="facebook-square"/></mdb-nav-item>
-          <mdb-nav-item href="#!" waves-fixed><mdb-icon fab icon="twitter"/></mdb-nav-item>
-          <mdb-nav-item href="https://github.com/mdbootstrap/bootstrap-material-design" waves-fixed class="border border-light rounded mr-1" target="_blank"><mdb-icon fab icon="github" class="mr-2"/>MDB GitHub </mdb-nav-item>
-          <mdb-nav-item href="https://mdbootstrap.com/products/vue-ui-kit/" waves-fixed class="border border-light rounded" target="_blank"><mdb-icon icon="gem" far class="mr-2"/>Go Pro </mdb-nav-item>
+          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="search"/></mdb-nav-item>
+          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="bell"/></mdb-nav-item>
+          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="user-alt"/></mdb-nav-item>
         </mdb-navbar-nav>
       </mdb-navbar-toggler>
     </mdb-navbar>
     <!--/.Navbar-->
     <!-- Sidebar -->
     <div class="sidebar-fixed position-fixed">
-      <a class="logo-wrapper"><img alt="" class="img-fluid" src="./assets/logo-mdb-vue-small.png"/></a>
+      <a class="logo-wrapper"><img alt="" class="img-fluid" src="./assets/D-Trainee.png"/></a>
       <mdb-list-group class="list-group-flush">
         <router-link to="/task_work" @click.native="activeItem = 7">
           <mdb-list-group-item :action="true" :class="activeItem === 7 && 'active'"><mdb-icon icon="calendar-check" class="mr-3"/>Task</mdb-list-group-item>
@@ -115,9 +108,12 @@ main {
   width: 270px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   z-index: 1050;
-  background-color: #fff;
+  background-color: #293241;
   padding: 1.5rem;
   padding-top: 0;
+}
+.img-fluid {
+  width: 100px;
 }
 
 .sidebar-fixed .logo-wrapper img{
