@@ -1,109 +1,266 @@
 <template>
-  <div>
-    <mdb-container>
-    <mdb-list-group>
-      <mdb-list-group-item active>
-        <div>
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-2 h5">List group item heading</h5>
-            <small>3 days ago</small>
-          </div>
-          <p class="mb-2">
-            Donec id elit non mi porta gravida at eget metus. Maecenas
-            sed diam eget risus varius blandit.
-          </p>
-          <small>Donec id elit non mi porta.</small>
-        </div>
-      </mdb-list-group-item>
-      <mdb-list-group-item>
-        <div>
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-2 h5">List group item heading</h5>
-            <small>3 days ago</small>
-          </div>
-          <p class="mb-2">
-            Donec id elit non mi porta gravida at eget metus. Maecenas
-            sed diam eget risus varius blandit.
-          </p>
-          <small>Donec id elit non mi porta.</small>
-        </div>
-      </mdb-list-group-item>
-      <mdb-list-group-item>
-        <div>
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-2 h5">List group item heading</h5>
-            <small>3 days ago</small>
-          </div>
-          <p class="mb-2">
-            Donec id elit non mi porta gravida at eget metus. Maecenas
-            sed diam eget risus varius blandit.
-          </p>
-          <small>Donec id elit non mi porta.</small>
-        </div>
-      </mdb-list-group-item>
-    </mdb-list-group>
-    <!-- trigger modal button -->
-    <mdb-btn rounded color="default" @click.native="modal = true">launch success modal<mdb-icon icon="eye" class="ml-1"/></mdb-btn>
-    <!-- Central Modal Medium Success -->
-    <mdb-modal side position="right" fullHeight direction="right" :show="modal" @close="modal = false">
-      <!--Header-->
-      <mdb-modal-header>
-        <mdb-modal-title>Success Modal</mdb-modal-title>
-      </mdb-modal-header>
-      <!--Body-->
-      <mdb-modal-body  class="text-center">
-        <mdb-icon icon="check" size="4x" class="mb-3 animated rotateIn"/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla
-          aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat.
-          Esse ratione fuga, enim, ab officiis totam.
-        </p>
-      </mdb-modal-body>
-      <!--Footer-->
-      <mdb-modal-footer center>
-        <mdb-btn color="success" @click.native="modal = false">Get it now <mdb-icon icon="diamond" class="ml-1" color="white"/></mdb-btn>
-        <mdb-btn outline="success" @click.native="modal = false">No, thanks</mdb-btn>
-      </mdb-modal-footer>
-    </mdb-modal>
-    </mdb-container>
-  </div>
+  <section id="task">
+       ...
+  </section>
 </template>
 
 <script>
-// eslint-disable-next-line standard/object-curly-even-spacing
-import {mdbListGroup, mdbListGroupItem, mdbBtn, mdbIcon, mdbModal, mdbModalHeader, mdbModalTitle, mdbModalBody, mdbModalFooter, mdbNavbar, mdbNavbarNav } from 'mdbvue'
+import {
+  mdbRow,
+  mdbCol,
+  mdbCard,
+  mdbView,
+  mdbCardBody,
+  mdbBtn,
+  mdbCardHeader,
+  mdbCardText,
+  mdbIcon,
+  mdbTbl,
+  mdbBarChart,
+  mdbPieChart,
+  mdbLineChart,
+  mdbRadarChart,
+  mdbDoughnutChart,
+  mdbListGroup,
+  mdbListGroupItem,
+  mdbBadge,
+  mdbModal,
+  mdbModalHeader,
+  mdbModalTitle,
+  mdbModalBody,
+  mdbModalFooter,
+  mdbBtnGroup, mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle, mdbPagination,
+  mdbPageItem,
+  mdbPageNav
+} from 'mdbvue'
+
 export default {
-  name: 'ListGroupPage',
-  components: {
-    mdbListGroup,
-    mdbListGroupItem
-  },
-  // eslint-disable-next-line no-dupe-keys
-  name: 'NavbarPage',
-  // eslint-disable-next-line no-dupe-keys
-  components: {
-    mdbNavbar,
-    mdbNavbarNav
-  },
-  // eslint-disable-next-line no-dupe-keys
   name: 'Task',
-  // eslint-disable-next-line no-dupe-keys
   components: {
+    mdbRow,
+    mdbCol,
+    mdbCard,
+    mdbView,
+    mdbCardBody,
     mdbBtn,
+    mdbCardHeader,
+    mdbCardText,
     mdbIcon,
+    mdbTbl,
+    mdbBarChart,
+    mdbPieChart,
+    mdbLineChart,
+    mdbRadarChart,
+    mdbDoughnutChart,
+    mdbListGroup,
+    mdbListGroupItem,
+    mdbBadge,
     mdbModal,
     mdbModalHeader,
     mdbModalTitle,
     mdbModalBody,
-    mdbModalFooter
+    mdbModalFooter,
+    mdbBtnGroup,
+    mdbDropdown,
+    mdbDropdownItem,
+    mdbDropdownMenu,
+    mdbDropdownToggle,
+    mdbPagination,
+    mdbPageItem,
+    mdbPageNav
   },
   data () {
     return {
-      modal: false
+      showFrameModalTop: false,
+      showFrameModalBottom: false,
+      showSideModalTopRight: false,
+      showSideModalTopLeft: false,
+      showSideModalBottomRight: false,
+      showSideModalBottomLeft: false,
+      showCentralModalSmall: false,
+      showCentralModalMedium: false,
+      showCentralModalLarge: false,
+      showCentralModalFluid: false,
+      showFluidModalRight: false,
+      showFluidModalLeft: false,
+      showFluidModalTop: false,
+      showFluidModalBottom: false,
+      barChartData: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: '#1',
+            data: [12, 39, 3, 50, 2, 32, 84],
+            backgroundColor: 'rgba(245, 74, 85, 0.5)',
+            borderWidth: 1
+          }, {
+            label: '#2',
+            data: [56, 24, 5, 16, 45, 24, 8],
+            backgroundColor: 'rgba(90, 173, 246, 0.5)',
+            borderWidth: 1
+          }, {
+            label: '#3',
+            data: [12, 25, 54, 3, 15, 44, 3],
+            backgroundColor: 'rgba(245, 192, 50, 0.5)',
+            borderWidth: 1
+          }
+        ]
+      },
+      barChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [{
+            barPercentage: 1,
+            gridLines: {
+              display: true,
+              color: 'rgba(0, 0, 0, 0.1)'
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              display: true,
+              color: 'rgba(0, 0, 0, 0.1)'
+            },
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      },
+      pieChartData: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            data: [300, 50, 100, 40, 120, 24, 52],
+            backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360', '#ac64ad'],
+            hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774', '#da92db']
+          }
+        ]
+      },
+      pieChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false
+      },
+      lineChartData: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: '#1',
+            backgroundColor: 'rgba(245, 74, 85, 0.5)',
+            data: [65, 59, 80, 81, 56, 55, 40]
+          },
+          {
+            label: '#2',
+            backgroundColor: 'rgba(90, 173, 246, 0.5)',
+            data: [12, 42, 121, 56, 24, 12, 2]
+          },
+          {
+            label: '#3',
+            backgroundColor: 'rgba(245, 192, 50, 0.5)',
+            data: [2, 123, 154, 76, 54, 23, 5]
+          }
+        ]
+      },
+      lineChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [{
+            gridLines: {
+              display: true,
+              color: 'rgba(0, 0, 0, 0.1)'
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              display: true,
+              color: 'rgba(0, 0, 0, 0.1)'
+            }
+          }]
+        }
+      },
+      radarChartData: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: '#1',
+            backgroundColor: 'rgba(245, 74, 85, 0.5)',
+            data: [65, 59, 80, 81, 56, 55, 40]
+          },
+          {
+            label: '#2',
+            backgroundColor: 'rgba(90, 173, 246, 0.5)',
+            data: [12, 42, 121, 56, 24, 12, 2]
+          },
+          {
+            label: '#3',
+            backgroundColor: 'rgba(245, 192, 50, 0.5)',
+            data: [2, 123, 154, 76, 54, 23, 5]
+          }
+        ]
+      },
+      radarChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false
+      },
+      doughnutChartData: {
+        labels: ['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey'],
+        datasets: [
+          {
+            data: [300, 50, 100, 40, 120],
+            backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+            hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774']
+          }
+        ]
+      },
+      doughnutChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
     }
   }
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+  .cascading-admin-card .admin-up {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: -20px;
+  }
+  .cascading-admin-card .admin-up .fas,
+  .cascading-admin-card .admin-up .far {
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.2), 0 2px 13px 0 rgba(0, 0, 0, 0.19);
+    padding: 1.7rem;
+    font-size: 2rem;
+    color: #fff;
+    text-align: left;
+    margin-right: 1rem;
+    border-radius: 3px;
+  }
+  .cascading-admin-card .admin-up .data {
+    float: right;
+    margin-top: 2rem;
+    text-align: right;
+  }
+  .admin-up .data p {
+    color: #999999;
+    font-size: 12px;
+  }
+  .classic-admin-card .card-body {
+    color: #fff;
+    margin-bottom: 0;
+    padding: 0.9rem;
+  }
+  .classic-admin-card .card-body p {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-bottom: 0;
+  }
+  .classic-admin-card .card-body h4 {
+    margin-top: 10px;
+  }
 </style>

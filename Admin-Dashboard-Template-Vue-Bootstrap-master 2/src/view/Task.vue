@@ -1,79 +1,79 @@
 <template>
   <section id="task">
-        <mdb-card cascade narrow class="mt-5">
-          <mdb-view class="gradient-card-header blue darken-2">
-            <h4 class="h4-responsive text-white">
-              Task
-            </h4>
-          </mdb-view>
-          <mdb-card-body class="text-center">
-            <mdb-row>
-              <mdb-col>
-                <div id="task-btn">
-                <mdb-btn-group vertical style="width: 100%">
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                  <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
-                    <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
-                  </mdb-btn>
-                </mdb-btn-group>
-                </div>
-                <br>
-                </mdb-col>
-            </mdb-row>
-            <mdb-row>
-              <mdb-col></mdb-col>
-              <mdb-col><mdb-pagination circle>
-                <mdb-page-item disabled>First</mdb-page-item>
-                <mdb-page-nav prev disabled></mdb-page-nav>
-                <mdb-page-item active>1</mdb-page-item>
-                <mdb-page-item>2</mdb-page-item>
-                <mdb-page-item>3</mdb-page-item>
-                <mdb-page-item>4</mdb-page-item>
-                <mdb-page-item>5</mdb-page-item>
-                <mdb-page-nav next></mdb-page-nav>
-                <mdb-page-item>Last</mdb-page-item>
-              </mdb-pagination></mdb-col>
-              <mdb-col></mdb-col>
-            </mdb-row>
+    <mdb-card cascade narrow class="mt-5">
+      <mdb-view class="gradient-card-header blue darken-2">
+        <h4 class="h4-responsive text-white">
+          Task
+        </h4>
+      </mdb-view>
+      <mdb-card-body class="text-center">
+        <mdb-row>
+          <mdb-col>
+            <div id="task-btn">
+              <mdb-btn-group vertical style="width: 100%">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="amber">
+                  <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
+                </mdb-btn>
+              </mdb-btn-group>
+            </div>
+            <br>
+          </mdb-col>
+        </mdb-row>
+        <mdb-row>
+          <mdb-col></mdb-col>
+          <mdb-col><mdb-pagination circle>
+            <mdb-page-item disabled>First</mdb-page-item>
+            <mdb-page-nav prev disabled></mdb-page-nav>
+            <mdb-page-item active>1</mdb-page-item>
+            <mdb-page-item>2</mdb-page-item>
+            <mdb-page-item>3</mdb-page-item>
+            <mdb-page-item>4</mdb-page-item>
+            <mdb-page-item>5</mdb-page-item>
+            <mdb-page-nav next></mdb-page-nav>
+            <mdb-page-item>Last</mdb-page-item>
+          </mdb-pagination></mdb-col>
+          <mdb-col></mdb-col>
+        </mdb-row>
 
-            <mdb-modal fullHeight position="right" :show="showFluidModalRight" @close="showFluidModalRight = false">
-              <mdb-modal-header>
-                <mdb-modal-title>Modal title</mdb-modal-title>
-              </mdb-modal-header>
-              <mdb-modal-body>...</mdb-modal-body>
-              <mdb-modal-footer>
-                <mdb-btn color="secondary" @click.native="showFluidModalRight = false">Close</mdb-btn>
-                <mdb-btn color="primary">Save changes</mdb-btn>
-              </mdb-modal-footer>
-            </mdb-modal>
-          </mdb-card-body>
-        </mdb-card>
+        <mdb-modal fullHeight position="right" :show="showFluidModalRight" @close="showFluidModalRight = false">
+          <mdb-modal-header>
+            <mdb-modal-title>Modal title</mdb-modal-title>
+          </mdb-modal-header>
+          <mdb-modal-body>...</mdb-modal-body>
+          <mdb-modal-footer>
+            <mdb-btn color="secondary" @click.native="showFluidModalRight = false">Close</mdb-btn>
+            <mdb-btn color="primary">Save changes</mdb-btn>
+          </mdb-modal-footer>
+        </mdb-modal>
+      </mdb-card-body>
+    </mdb-card>
   </section>
 </template>
 
@@ -108,7 +108,7 @@ import {
 } from 'mdbvue'
 
 export default {
-  name: 'Task_Work',
+  name: 'Task',
   components: {
     mdbRow,
     mdbCol,
