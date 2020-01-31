@@ -1,12 +1,363 @@
 <template>
-  <div>
-    Profile
-  </div>
+  <section id="task">
+    <mdb-card cascade narrow class="mt-5">
+      <mdb-view class="gradient-card-header blue darken-2">
+        <h4 class="h4-responsive text-white">
+          Name Surname
+        </h4>
+      </mdb-view>
+      <mdb-card-body class="text-center">
+        <mdb-row>
+
+          <mdb-col>
+            <mdb-container>
+              <section class="text-center my-5">
+                <h2 class="h1-responsive font-weight-bold my-5"></h2>
+                <p class="grey-text w-responsive mx-auto mb-5"></p>
+                  <mdb-row>
+                  <mdb-col md="12" class="mb-4">
+                    <mdb-card  style=" background-color: #ffffff">
+                      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                        <div>
+                          <h6 class="purple-text">
+                          </h6>
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>Profile</strong>
+                          </h3>
+
+                          <ul class="list-unstyled">
+                            <mdb-media tag="li">
+                              <mdb-media-image circle class="d-flex mr-8" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg" alt="Generic placeholder image" />
+                              <mdb-media-body>
+                                <h5 class="mt-0 mb-1 font-weight-bold"></h5>
+                                <section class="preview">
+                                  <mdb-input size="3" basic class="mb-1">
+                                    <span class="input-group-text" slot="prepend">Email:</span>
+                                  </mdb-input>
+                                  <mdb-input size="3" basic class="mb-1">
+                                    <span class="input-group-text" slot="prepend"> Tel:</span>
+                                  </mdb-input>
+                                  <mdb-input size="3" basic class="mb-1">
+                                    <span class="input-group-text" slot="prepend">Line:</span>
+                                  </mdb-input>
+
+                                </section>
+                              </mdb-media-body>
+                            </mdb-media>
+                          </ul>
+
+                        </div>
+                      </div>
+                    </mdb-card>
+                  </mdb-col>
+                  <mdb-col md="6" class="md-0 mb-4">
+                    <mdb-card  style="background">
+                      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                        <div>
+                          <h6 class="pink-text">
+
+                          </h6>
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>ข้อมูลทั่วไป</strong>
+                          </h3>
+                          <p class="pb-3">
+                            <mdb-input size="5" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">ชื่อ-นามสกุล:</span>
+                            </mdb-input>
+                            <mdb-input size="5" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">วัน/เดือน/ปีเกิด:</span>
+                            </mdb-input>
+                            <mdb-input size="5" basic class="mb-1">
+                            <span class="input-group-text" slot="prepend">เพศ:</span>
+                          </mdb-input>
+                            <mdb-input size="5" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">ที่อยู่:</span>
+                            </mdb-input>
+                            <mdb-input size="5" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">มหาวิทยาลัย:</span>
+                            </mdb-input>
+                            <mdb-input size="5" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">คณะ:</span>
+                            </mdb-input>
+                            <mdb-input size="5" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">สาขาวิชา:</span>
+                            </mdb-input>
+                          </p>
+
+                        </div>
+                      </div>
+                    </mdb-card>
+                  </mdb-col>
+                  <mdb-col md="6" class="md-0 mb-4">
+                    <mdb-card class=" #2196f3 "  style="background: ">
+                      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                        <div>
+                          <h6 class="green-text">
+
+                          </h6>
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>ข้อมูลในการทำงาน</strong>
+                          </h3>
+                          <p class="pb-3">
+                            <mdb-input size="5" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">ต่ำแหน่ง:</span>
+                            </mdb-input>
+                            <mdb-input size="8" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">พี่เลี้ยง:</span>
+                            </mdb-input>
+                            <mdb-input size="8" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">ต่ำแหน่ง:</span>
+                            </mdb-input>
+                            <mdb-input size="5" basic class="mb-1">
+                              <span class="input-group-text" slot="prepend">ระยะเวลาฝึกงาน:</span>
+                            </mdb-input>
+
+                          </p>
+
+                        </div>
+                      </div>
+                    </mdb-card>
+                  </mdb-col>
+                </mdb-row>
+              </section>
+            </mdb-container>
+
+          </mdb-col>
+        </mdb-row>
+        <mdb-row>
+
+        </mdb-row>
+
+      </mdb-card-body>
+    </mdb-card>
+  </section>
 </template>
 
 <script>
+import {
+  mdbRow,
+  mdbCol,
+  mdbCard,
+  mdbView,
+  mdbCardBody,
+  mdbBtn,
+  mdbCardHeader,
+  mdbCardText,
+  mdbIcon,
+  mdbTbl,
+  mdbBarChart,
+  mdbPieChart,
+  mdbLineChart,
+  mdbRadarChart,
+  mdbDoughnutChart,
+  mdbListGroup,
+  mdbListGroupItem,
+  mdbBadge,
+  mdbModal,
+  mdbModalHeader,
+  mdbModalTitle,
+  mdbModalBody,
+  mdbModalFooter,
+  mdbBtnGroup, mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle, mdbPagination,
+  mdbPageItem,
+  mdbPageNav,
+  mdbMedia,
+  mdbMediaBody,
+  mdbMediaImage,
+  mdbInput
+} from 'mdbvue'
+
 export default {
-  name: 'Profile'
+  name: 'Task',
+  components: {
+    mdbRow,
+    mdbCol,
+    mdbCard,
+    mdbView,
+    mdbCardBody,
+    mdbBtn,
+    mdbCardHeader,
+    mdbCardText,
+    mdbIcon,
+    mdbTbl,
+    mdbBarChart,
+    mdbPieChart,
+    mdbLineChart,
+    mdbRadarChart,
+    mdbDoughnutChart,
+    mdbListGroup,
+    mdbListGroupItem,
+    mdbBadge,
+    mdbModal,
+    mdbModalHeader,
+    mdbModalTitle,
+    mdbModalBody,
+    mdbModalFooter,
+    mdbBtnGroup,
+    mdbDropdown,
+    mdbDropdownItem,
+    mdbDropdownMenu,
+    mdbDropdownToggle,
+    mdbPagination,
+    mdbPageItem,
+    mdbPageNav,
+    mdbMedia,
+    mdbMediaBody,
+    mdbMediaImage,
+    mdbInput
+  },
+
+  data () {
+    return {
+      showFrameModalTop: false,
+      showFrameModalBottom: false,
+      showSideModalTopRight: false,
+      showSideModalTopLeft: false,
+      showSideModalBottomRight: false,
+      showSideModalBottomLeft: false,
+      showCentralModalSmall: false,
+      showCentralModalMedium: false,
+      showCentralModalLarge: false,
+      showCentralModalFluid: false,
+      showFluidModalRight: false,
+      showFluidModalLeft: false,
+      showFluidModalTop: false,
+      showFluidModalBottom: false,
+      barChartData: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: '#1',
+            data: [12, 39, 3, 50, 2, 32, 84],
+            backgroundColor: 'rgba(245, 74, 85, 0.5)',
+            borderWidth: 1
+          }, {
+            label: '#2',
+            data: [56, 24, 5, 16, 45, 24, 8],
+            backgroundColor: 'rgba(90, 173, 246, 0.5)',
+            borderWidth: 1
+          }, {
+            label: '#3',
+            data: [12, 25, 54, 3, 15, 44, 3],
+            backgroundColor: 'rgba(245, 192, 50, 0.5)',
+            borderWidth: 1
+          }
+        ]
+      },
+      barChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [{
+            barPercentage: 1,
+            gridLines: {
+              display: true,
+              color: 'rgba(0, 0, 0, 0.1)'
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              display: true,
+              color: 'rgba(0, 0, 0, 0.1)'
+            },
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      },
+      pieChartData: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            data: [300, 50, 100, 40, 120, 24, 52],
+            backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360', '#ac64ad'],
+            hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774', '#da92db']
+          }
+        ]
+      },
+      pieChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false
+      },
+      lineChartData: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: '#1',
+            backgroundColor: 'rgba(245, 74, 85, 0.5)',
+            data: [65, 59, 80, 81, 56, 55, 40]
+          },
+          {
+            label: '#2',
+            backgroundColor: 'rgba(90, 173, 246, 0.5)',
+            data: [12, 42, 121, 56, 24, 12, 2]
+          },
+          {
+            label: '#3',
+            backgroundColor: 'rgba(245, 192, 50, 0.5)',
+            data: [2, 123, 154, 76, 54, 23, 5]
+          }
+        ]
+      },
+      lineChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [{
+            gridLines: {
+              display: true,
+              color: 'rgba(0, 0, 0, 0.1)'
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              display: true,
+              color: 'rgba(0, 0, 0, 0.1)'
+            }
+          }]
+        }
+      },
+      radarChartData: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: '#1',
+            backgroundColor: 'rgba(245, 74, 85, 0.5)',
+            data: [65, 59, 80, 81, 56, 55, 40]
+          },
+          {
+            label: '#2',
+            backgroundColor: 'rgba(90, 173, 246, 0.5)',
+            data: [12, 42, 121, 56, 24, 12, 2]
+          },
+          {
+            label: '#3',
+            backgroundColor: 'rgba(245, 192, 50, 0.5)',
+            data: [2, 123, 154, 76, 54, 23, 5]
+          }
+        ]
+      },
+      radarChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false
+      },
+      doughnutChartData: {
+        labels: ['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey'],
+        datasets: [
+          {
+            data: [300, 50, 100, 40, 120],
+            backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+            hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774']
+          }
+        ]
+      },
+      doughnutChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    }
+  }
 }
 </script>
 
