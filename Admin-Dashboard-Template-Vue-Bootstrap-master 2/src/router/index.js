@@ -4,6 +4,7 @@ import Home from '../view/Home'
 import Contacts from '../view/Contacts'
 import Profile from '../view/Profile'
 import Task from '../view/Task'
+import Calendar from '../view/Calendar'
 
 Vue.use(Router)
 
@@ -16,6 +17,12 @@ export default new Router({
       component: Home,
       props: { page: 1 },
       alias: '/'
+    },
+    {
+      path: '/calendar',
+      name: 'Calendar',
+      component: Calendar,
+      props: { page: 2 }
     },
     {
       path: '/profile',
