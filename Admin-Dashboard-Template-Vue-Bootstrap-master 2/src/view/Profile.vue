@@ -1,14 +1,13 @@
 <template>
   <section id="task">
-    <mdb-card cascade narrow class="mt-5">
+    <mdb-card cascade narrow class="mt-2">
       <mdb-view class="gradient-card-header blue darken-2">
-        <h4 class="h4-responsive text-white">
+        <h4 class="h2-responsive text-white">
           Name Surname
         </h4>
       </mdb-view>
       <mdb-card-body class="text-center">
         <mdb-row>
-
           <mdb-col>
             <mdb-container>
               <section class="text-center my-5">
@@ -16,8 +15,8 @@
                 <p class="grey-text w-responsive mx-auto mb-5"></p>
                   <mdb-row>
                   <mdb-col md="12" class="mb-4">
-                    <mdb-card  style=" background-color: #ffffff">
-                      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                    <mdb-card  style="background-color: #3D5A80">
+                      <div class="text-white text-center d-flex align-items-center px-4 rounded">
                         <div>
                           <h6 class="purple-text">
                           </h6>
@@ -51,8 +50,8 @@
                     </mdb-card>
                   </mdb-col>
                   <mdb-col md="6" class="md-0 mb-4">
-                    <mdb-card  style="background">
-                      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                    <mdb-card  style="background-color: #3D5A80">
+                      <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
                         <div>
                           <h6 class="pink-text">
 
@@ -89,8 +88,8 @@
                     </mdb-card>
                   </mdb-col>
                   <mdb-col md="6" class="md-0 mb-4">
-                    <mdb-card class=" #2196f3 "  style="background: ">
-                      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                    <mdb-card class=" #2196f3 "  style="background-color: #3D5A80">
+                      <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
                         <div>
                           <h6 class="green-text">
 
