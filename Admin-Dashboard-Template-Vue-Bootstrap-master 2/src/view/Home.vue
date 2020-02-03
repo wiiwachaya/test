@@ -17,7 +17,7 @@
     <mdb-col>
       <h2>กิจกรรมที่ต้องเข้าร่วม</h2>
     </mdb-col>
-    <mdb-btn tag="a" floating action class="ml-auto mr-4 mdb-color lighten-4">
+    <mdb-btn tag="a" floating action class="ml-auto mr-5 mdb-color lighten-4">
       <mdb-icon icon="chevron-left" class="pl-2" />
     </mdb-btn>
     <mdb-btn tag="a" floating action class="ml-auto mr-9 mdb-color lighten-4">
@@ -64,8 +64,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #bbdefb;
-    color: white;
+    background: #ffffff;
+    color:  grey;
     margin: 0.5rem;
     font-weight: 900;
     font-size: 2rem;
