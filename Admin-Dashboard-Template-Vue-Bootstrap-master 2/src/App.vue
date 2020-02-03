@@ -17,7 +17,7 @@
       <a class="logo-wrapper"><img alt="" class="img-fluid" src="./assets/1_w55hpZI8EkcHxhghZjK-NA 1.png"/></a>
       <mdb-list-group class="list-group-flush">
         <router-link to="/home" @click.native="activeItem = 1">
-          <mdb-list-group-item :action="true" :class="activeItem === 1 && 'active'"><mdb-icon icon="home" class="mr-3"/>หน้าหลัก</mdb-list-group-item>
+          <mdb-list-group-item  :action="true" :class="activeItem === 1 && 'active'"><mdb-icon icon="home" class="mr-3"/>หน้าหลัก</mdb-list-group-item>
         </router-link>
         <router-link to="/calendar" @click.native="activeItem = 2">
           <mdb-list-group-item :action="true" :class="activeItem === 2 && 'active'"><mdb-icon icon="calendar-alt" class="mr-3"/>ปฏิทิน</mdb-list-group-item>
@@ -26,7 +26,7 @@
           <mdb-list-group-item :action="true" :class="activeItem === 3 && 'active'"><mdb-icon icon="address-book" class="mr-3"/>ผู้ติดต่อ</mdb-list-group-item>
         </router-link>
         <router-link to="/task" @click.native="activeItem = 4">
-          <mdb-list-group-item :action="true" :class="activeItem === 4 && 'active'"><mdb-icon icon="calendar-check" class="mr-3"/>ทาร์คงาน</mdb-list-group-item>
+          <mdb-list-group-item :action="true"  :class="activeItem === 4 && 'active'"><mdb-icon icon="calendar-check" class="mr-3"/>ทาร์คงาน</mdb-list-group-item>
         </router-link>
         <router-link to="/profile" @click.native="activeItem = 5">
           <mdb-list-group-item :action="true" :class="activeItem === 5 && 'active'"><mdb-icon icon="user" class="mr-3"/>โปร์ไฟล์</mdb-list-group-item>
