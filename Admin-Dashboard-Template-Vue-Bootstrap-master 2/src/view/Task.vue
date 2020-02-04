@@ -7,7 +7,7 @@
       <mdb-col></mdb-col>
       <mdb-col></mdb-col>
       <mdb-col col="2">
-        <mdb-btn @click.native="create=true" class="mb-0" color="warning" >สร้าง</mdb-btn>
+        <mdb-btn @click.native="create=true" class="mb-0" color="success" >สร้าง</mdb-btn>
       </mdb-col>
     </mdb-row>
     <mdb-card cascade narrow class="mt-2">
@@ -173,7 +173,7 @@
               <mdb-card-body>
                 <label style="color: white">สถานะ :</label>
                 <mdb-dropdown>
-                  <mdb-dropdown-toggle color="primary" size="md" slot="toggle" class="z-depth-0">โปรดเลือก</mdb-dropdown-toggle>
+                  <mdb-dropdown-toggle color="primary" size="md" slot="toggle" class="z-depth-0" disabled>โปรดเลือก</mdb-dropdown-toggle>
                   <mdb-dropdown-menu>
                     <mdb-dropdown-item>TO DO</mdb-dropdown-item>
                     <mdb-dropdown-item>DEV TEST</mdb-dropdown-item>
@@ -182,13 +182,13 @@
                     <mdb-dropdown-item>DONE</mdb-dropdown-item>
                   </mdb-dropdown-menu>
                 </mdb-dropdown>
-                <mdb-input style="background-color: #ffffff">
+                <mdb-input style="background-color: #ffffff" disabled>
                   <span class="input-group-text md-addon" slot="prepend" style="color: #3D5A80">หัวข้อ :</span>
                 </mdb-input>
                 <label style="color: white">ความสำคัญ :</label>
                 <mdb-dropdown>
-                  <mdb-dropdown-toggle color="primary" size="md" slot="toggle" class="z-depth-0">โปรดเลือก</mdb-dropdown-toggle>
-                  <mdb-dropdown-menu>
+                  <mdb-dropdown-toggle color="primary" size="md" slot="toggle" class="z-depth-0" disabled>โปรดเลือก</mdb-dropdown-toggle>
+                  <mdb-dropdown-menu disabled>
                     <mdb-dropdown-item>ด่วน</mdb-dropdown-item>
                     <mdb-dropdown-item>มาก</mdb-dropdown-item>
                     <mdb-dropdown-item>ปานกลาง</mdb-dropdown-item>

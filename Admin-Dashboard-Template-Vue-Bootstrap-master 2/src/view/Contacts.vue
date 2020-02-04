@@ -7,7 +7,7 @@
       <mdb-col style="text-align: end">
         <mdb-btn-toolbar>
           <mdb-btn-group class="mr-2">
-            <mdb-btn color="warning">สร้าง</mdb-btn>
+            <mdb-btn color="success">สร้าง</mdb-btn>
             <mdb-btn color="danger">ลบ</mdb-btn>
           </mdb-btn-group>
         </mdb-btn-toolbar>
