@@ -9,18 +9,26 @@
       <input class="form-control my-0 py-1" type="text" placeholder="ข่าวสารวันนี้" aria-label="Search">
     </div>
     <mdb-row>
+      <router-link to="/home" @click.native="activeItem = 1">
       <mdb-col><mdb-btn active size="lg" color=" blue-gradient">
-        <mdb-icon icon="user" class="mr-3"/>ยินดีต้อนรับ</mdb-btn>
+        <mdb-icon icon="user"  class="mr-4"/>ยินดีต้อนรับ</mdb-btn>
       </mdb-col>
+      </router-link>
+      <router-link to="/calendar" @click.native="activeItem = 2">
       <mdb-col><mdb-btn active size="lg" color=" purple-gradient">
-        <mdb-icon icon="calendar-alt" class="mr-3"/>กิจกรรมล่าสุด</mdb-btn>
+        <mdb-icon icon="calendar-alt"  class="mr-4"/>กิจกรรมล่าสุด</mdb-btn>
       </mdb-col>
+      </router-link>
+      <router-link to="/task" @click.native="activeItem = 4">
       <mdb-col><mdb-btn active size="lg" color=" peach-gradient">
-        <mdb-icon icon="calendar-check" class="mr-3"/>งานล่าสุด</mdb-btn>
+        <mdb-icon icon="calendar-check" class="mr-4"/>งานล่าสุด</mdb-btn>
       </mdb-col>
+      </router-link>
+      <router-link to="/contacts" @click.native="activeItem = 3">
       <mdb-col><mdb-btn active size="lg" color=" aqua-gradient">
-        <mdb-icon icon="calendar-check" class="mr-3"/>ผู้ติดต่อล่าสุด</mdb-btn>
+        <mdb-icon icon="calendar-check" class="mr-4"/>ผู้ติดต่อล่าสุด</mdb-btn>
       </mdb-col>
+      </router-link>
     </mdb-row>
     <mdb-col>
       <h2>กิจกรรมที่ต้องเข้าร่วม</h2>
