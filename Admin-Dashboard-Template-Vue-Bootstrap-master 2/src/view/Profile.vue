@@ -9,7 +9,6 @@
 
       <mdb-modal-footer right>
         <mdb-btn @click.native="แก้ไขข้อมูล = false" color="success">แก้ไขข้อมูล</mdb-btn>
-        <mdb-btn @click.native="บันทึก" color="danger">บันทึก</mdb-btn>
       </mdb-modal-footer>
 
       <mdb-card-body class="text-center">
@@ -118,7 +117,7 @@
                             <mdb-input type="textarea" basic>
                               <span class="input-group-text" slot="prepend">พี่เลี้ยง:
                               <br>
-                                ตำแหน่ง:
+                                ต่ำแหน่ง:
                               </span>
                             </mdb-input>
                             <br>
