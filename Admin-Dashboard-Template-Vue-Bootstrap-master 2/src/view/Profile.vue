@@ -6,37 +6,47 @@
           Name Surname
         </h4>
       </mdb-view>
+
+      <mdb-modal-footer right>
+        <mdb-btn @click.native="แก้ไขข้อมูล = false" color="success">แก้ไขข้อมูล</mdb-btn>
+        <mdb-btn @click.native="บันทึก" color="danger">บันทึก</mdb-btn>
+      </mdb-modal-footer>
+
       <mdb-card-body class="text-center">
         <mdb-row>
           <mdb-col>
             <mdb-container>
-              <section class="text-center my-5">
-                <h2 class="h1-responsive font-weight-bold my-5"></h2>
-                <p class="grey-text w-responsive mx-auto mb-5"></p>
+
+              <section class="text-center my-3">
+                <h2 class="h1-responsive font-weight-bold my-1"></h2>
+                <p class="grey-text w-responsive mx-auto mb-1"></p>
                   <mdb-row>
-                  <mdb-col md="12" class="mb-4">
+                  <mdb-col md="12" class="mb-3">
                     <mdb-card  style="background-color: #3D5A80">
                       <div class="text-white text-center d-flex align-items-center px-4 rounded">
                         <div>
                           <h6 class="purple-text">
                           </h6>
-                          <h3 class="py-3 font-weight-bold">
-                            <strong>Profile</strong>
-                          </h3>
-
                           <ul class="list-unstyled">
                             <mdb-media tag="li">
-                              <mdb-media-image circle class="d-flex mr-8" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg" alt="Generic placeholder image" />
+                              <!-- Grid column -->
+                              <mdb-col xl="5" md="4" class="mb-1 text-left">
+
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1 rounded-circle"
+                                     alt="Responsive image">
+
+                              </mdb-col>
+                              <!-- Grid column -->
                               <mdb-media-body>
                                 <h5 class="mt-0 mb-1 font-weight-bold"></h5>
                                 <section class="preview">
-                                  <mdb-input size="3" basic class="mb-1">
+                                  <mdb-input size="3" basic class="mb-4">
                                     <span class="input-group-text" slot="prepend">Email:</span>
                                   </mdb-input>
-                                  <mdb-input size="3" basic class="mb-1">
-                                    <span class="input-group-text" slot="prepend"> Tel:</span>
+                                  <mdb-input size="3" basic class="mb-4">
+                                    <span class="input-group-text" slot="prepend">Tel:</span>
                                   </mdb-input>
-                                  <mdb-input size="3" basic class="mb-1">
+                                  <mdb-input size="3" basic class="mb-4">
                                     <span class="input-group-text" slot="prepend">Line:</span>
                                   </mdb-input>
 
@@ -56,33 +66,35 @@
                           <h6 class="pink-text">
 
                           </h6>
-                          <h3 class="py-3 font-weight-bold">
-                            <strong>ข้อมูลทั่วไป</strong>
-                          </h3>
-                          <p class="pb-3">
-                            <mdb-input size="5" basic class="mb-1">
+                          <mdb-view gradient="blue" cascade>
+                            <h2 class="card-header-title">ข้อมูลทั่วไป</h2>
+                          </mdb-view>
+                          <br>
+                          <section class="preview">
+                            <mdb-input basic aria-label="First name">
                               <span class="input-group-text" slot="prepend">ชื่อ-นามสกุล:</span>
+                              <mdb-input noWrapper aria-label="Last name"/>
                             </mdb-input>
-                            <mdb-input size="5" basic class="mb-1">
-                              <span class="input-group-text" slot="prepend">วัน/เดือน/ปีเกิด:</span>
-                            </mdb-input>
-                            <mdb-input size="5" basic class="mb-1">
+                          </section>
+                          <br>
+                          <mdb-input size="3" basic class="mb-4">
+                            <span class="input-group-text" slot="prepend">วัน/เดือน/ปีเกิด:</span>
+                          </mdb-input>
+                          <mdb-input size="4" basic class="mb-4">
                             <span class="input-group-text" slot="prepend">เพศ:</span>
                           </mdb-input>
-                            <mdb-input size="5" basic class="mb-1">
-                              <span class="input-group-text" slot="prepend">ที่อยู่:</span>
-                            </mdb-input>
-                            <mdb-input size="5" basic class="mb-1">
-                              <span class="input-group-text" slot="prepend">มหาวิทยาลัย:</span>
-                            </mdb-input>
-                            <mdb-input size="5" basic class="mb-1">
-                              <span class="input-group-text" slot="prepend">คณะ:</span>
-                            </mdb-input>
-                            <mdb-input size="5" basic class="mb-1">
-                              <span class="input-group-text" slot="prepend">สาขาวิชา:</span>
-                            </mdb-input>
-                          </p>
-
+                          <mdb-input type="textarea" basic>
+                            <span class="input-group-text" slot="prepend">ที่อยู่:</span>
+                          </mdb-input>
+                          <br>
+                          <mdb-input type="textarea" basic>
+                            <span class="input-group-text" slot="prepend">มหาวิทยาลัย:
+                            <br>
+                              คณะ:
+                              <br>
+                              สาขาวิชา:
+                            </span>
+                          </mdb-input>
                         </div>
                       </div>
                     </mdb-card>
@@ -94,23 +106,25 @@
                           <h6 class="green-text">
 
                           </h6>
-                          <h3 class="py-3 font-weight-bold">
-                            <strong>ข้อมูลในการทำงาน</strong>
-                          </h3>
+                          <mdb-view gradient="blue" cascade>
+                            <h2 class="card-header-title">ข้อมูลในการทำงาน</h2>
+                          </mdb-view>
+                          <br>
                           <p class="pb-3">
                             <mdb-input size="5" basic class="mb-1">
                               <span class="input-group-text" slot="prepend">ต่ำแหน่ง:</span>
                             </mdb-input>
-                            <mdb-input size="8" basic class="mb-1">
-                              <span class="input-group-text" slot="prepend">พี่เลี้ยง:</span>
+                            <br>
+                            <mdb-input type="textarea" basic>
+                              <span class="input-group-text" slot="prepend">พี่เลี้ยง:
+                              <br>
+                                ตำแหน่ง:
+                              </span>
                             </mdb-input>
-                            <mdb-input size="8" basic class="mb-1">
-                              <span class="input-group-text" slot="prepend">ต่ำแหน่ง:</span>
-                            </mdb-input>
-                            <mdb-input size="5" basic class="mb-1">
+                            <br>
+                            <mdb-input type="textarea" basic>
                               <span class="input-group-text" slot="prepend">ระยะเวลาฝึกงาน:</span>
                             </mdb-input>
-
                           </p>
 
                         </div>
