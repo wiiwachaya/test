@@ -8,7 +8,8 @@
       </mdb-view>
 
       <mdb-modal-footer right>
-        <mdb-btn @click.native="แก้ไขข้อมูล = false" color=" white">แก้ไขข้อมูล</mdb-btn>
+        <mdb-btn @click.native="แก้ไขข้อมูล = false" color="success">แก้ไขข้อมูล</mdb-btn>
+        <mdb-btn @click.native="บันทึก" color="danger">บันทึก</mdb-btn>
       </mdb-modal-footer>
 
       <mdb-card-body class="text-center">
@@ -28,7 +29,14 @@
                           </h6>
                           <ul class="list-unstyled">
                             <mdb-media tag="li">
-                              <mdb-media-image circle class="d-flex mr-8" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg" alt="Generic placeholder image" />
+                              <!-- Grid column -->
+                              <mdb-col xl="5" md="4" class="mb-1 text-left">
+
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1 rounded-circle"
+                                     alt="Responsive image">
+
+                              </mdb-col>
+                              <!-- Grid column -->
                               <mdb-media-body>
                                 <h5 class="mt-0 mb-1 font-weight-bold"></h5>
                                 <section class="preview">
