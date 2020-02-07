@@ -6,8 +6,9 @@
       <mdb-col></mdb-col>
       <mdb-col col="2" style="text-align: end">
         <mdb-btn-toolbar style="text-align: end">
-          <mdb-btn-group class="mr-2" style="color: #EE6C4D">
-            <mdb-btn @click.native="modal = true">สร้าง</mdb-btn>
+          <mdb-btn-group class="mr-2">
+            <mdb-btn @click.native="modal = true" style="background: #EE6C4D; color: white" color="#3D5A80">
+              สร้าง</mdb-btn>
           </mdb-btn-group>
         </mdb-btn-toolbar>
         <!--Modal-->
@@ -26,7 +27,7 @@
     </mdb-row>
         <mdb-tabs
           :active="0"
-          default
+          default style="color: #3D5A80"
           :links="[
       { text: 'All', slot: 'custom-slot' },
       { text: 'Employees' },
@@ -45,7 +46,7 @@
                         <mdb-dropdown-toggle slot="toggle" size="sm"><mdb-icon fas icon="ellipsis-h" size="lg"/></mdb-dropdown-toggle>
                         <mdb-dropdown-menu>
                           <mdb-dropdown-item>ดูข้อมูล</mdb-dropdown-item>
-                          <mdb-dropdown-item @click.native="rmmodal = true">ลบข้อมูล</mdb-dropdown-item>
+                          <mdb-dropdown-item @click ="remodel(index)">ลบข้อมูล</mdb-dropdown-item>
                         </mdb-dropdown-menu>
                       </mdb-dropdown>
                     </mdb-card-title>
@@ -63,7 +64,7 @@
                 </mdb-col>
               </mdb-row>
             </mdb-container>
-            <!--------------->
+            <!-------Remove Model-------->
             <mdb-modal :show="rmmodal" @close="rmmodal = false">
               <mdb-modal-header style="background-color: #bdbdbd  ; color: white">
                 <mdb-modal-title>ลบข้อมูล</mdb-modal-title>
@@ -71,7 +72,7 @@
               <mdb-modal-body>คุณแน่ใจหรือไม่</mdb-modal-body>
               <mdb-modal-footer style="background-color: #EDEDEE ">
                 <mdb-btn color="danger" @click.native="rmmodal = false">ปิด</mdb-btn>
-                <mdb-btn color="primary">ยืนยัน</mdb-btn>
+                <mdb-btn color="primary" @click="remmodal(index)">ยืนยัน</mdb-btn>
               </mdb-modal-footer>
             </mdb-modal>
             <!--------------->
@@ -200,6 +201,9 @@ export default {
     return {
       modal: false,
       rmmodal: false,
+      remodel (index) {
+        this.mData.splice(index, 1)
+      },
       mData: [
         {name: 'test1',
           tel: '001-0000001',

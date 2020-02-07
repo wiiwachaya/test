@@ -7,7 +7,7 @@
       <mdb-col></mdb-col>
       <mdb-col></mdb-col>
       <mdb-col col="2">
-        <mdb-btn @click.native="create=true" class="mb-0" color="success" >สร้าง</mdb-btn>
+        <mdb-btn @click.native="create=true" class="mb-0" style="background: #EE6C4D; color: white" color="#3D5A80">สร้าง</mdb-btn>
       </mdb-col>
     </mdb-row>
     <mdb-card cascade narrow class="mt-2">
@@ -16,34 +16,34 @@
           <mdb-col>
             <div id="task-btn">
               <mdb-btn-group vertical style="width: 100%">
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
-                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" color="indigo">
+                <mdb-btn @click.native="showFluidModalRight = true" class="mb-0" style="background: #3D5A80; color: white" color="#3D5A80">
                   <div style="text-align: start"><mdb-icon icon="bookmark" /></div>
                 </mdb-btn>
               </mdb-btn-group>
@@ -101,7 +101,8 @@
               <mdb-card-body>
                 <label style="color: white">สถานะ :</label>
                 <mdb-dropdown>
-                  <mdb-dropdown-toggle color="primary" size="md" slot="toggle" class="z-depth-0">โปรดเลือก</mdb-dropdown-toggle>
+                  <mdb-dropdown-toggle style="background: #EE6C4D; color: white" color="#3D5A80" size="md" slot="toggle" class="z-depth-0">
+                    โปรดเลือก</mdb-dropdown-toggle>
                   <mdb-dropdown-menu>
                     <mdb-dropdown-item>TO DO</mdb-dropdown-item>
                     <mdb-dropdown-item>DEV TEST</mdb-dropdown-item>
@@ -115,7 +116,8 @@
                 </mdb-input>
                 <label style="color: white">ความสำคัญ :</label>
                 <mdb-dropdown>
-                  <mdb-dropdown-toggle color="primary" size="md" slot="toggle" class="z-depth-0">โปรดเลือก</mdb-dropdown-toggle>
+                  <mdb-dropdown-toggle style="background: #EE6C4D; color: white" color="#3D5A80" size="md" slot="toggle" class="z-depth-0">
+                    โปรดเลือก</mdb-dropdown-toggle>
                   <mdb-dropdown-menu>
                     <mdb-dropdown-item>ด่วน</mdb-dropdown-item>
                     <mdb-dropdown-item>มาก</mdb-dropdown-item>
@@ -134,7 +136,7 @@
             </mdb-card>
           </mdb-modal-body>
           <mdb-modal-footer center>
-            <mdb-btn @click.native="create = false">บันทึก</mdb-btn>
+            <mdb-btn @click.native="create = false" style="background: #EE6C4D; color: white" color="#3D5A80">บันทึก</mdb-btn>
           </mdb-modal-footer>
         </mdb-modal>
         <!---->
