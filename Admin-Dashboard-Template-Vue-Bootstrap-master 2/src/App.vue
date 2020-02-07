@@ -1,13 +1,13 @@
 <template>
   <div class="flexible-content">
     <!--Navbar-->
-    <mdb-navbar class="flexible-navbar white" light position="top" scrolling>
+    <mdb-navbar class="flexible-navbar" light position="top" scrolling style="background-color: #3D5A80">
       <mdb-navbar-brand target="_blank"><img alt="" class="img-fluid" src="./assets/D-Trainee.png"/></mdb-navbar-brand>
       <mdb-navbar-toggler>
         <mdb-navbar-nav right>
-          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="search"/></mdb-nav-item>
-          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="bell"/></mdb-nav-item>
-          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="user-alt"/></mdb-nav-item>
+          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="search" style="color: white"/></mdb-nav-item>
+          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="bell" style="color: white"/></mdb-nav-item>
+          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="user-alt" style="color: white"/></mdb-nav-item>
         </mdb-navbar-nav>
       </mdb-navbar-toggler>
     </mdb-navbar>
@@ -38,7 +38,7 @@
       <div class="mt-5 p-5">
         <router-view/>
       </div>
-      <ftr color="primary-color-dark" class="text-center font-small darken-2">
+      <ftr color="color-dark" class="text-center font-small darken-2" style="background-color: #3D5A80">
         <hr class="my4"/>
         <div class="pb-4">
           <a href="#"><mdb-icon fab icon="facebook-square" class="mr-3"/></a>

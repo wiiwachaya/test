@@ -5,6 +5,21 @@ import Contacts from '../view/Contacts'
 import Profile from '../view/Profile'
 import Task from '../view/Task'
 import Calendar from '../view/Calendar'
+import DaySpanVuetify from 'dayspan-vuetify'
+import Test from '../view/Test'
+
+Vue.use(DaySpanVuetify, {
+  // options is vue definition, the resulting reactive component is stored in components as this.$dayspan or Vue.$dayspan
+  data: {
+    // data or computed to override
+  },
+  computed: {
+    // data or computed to override
+  },
+  methods: {
+    // methods to override
+  }
+})
 
 Vue.use(Router)
 
@@ -41,6 +56,12 @@ export default new Router({
       name: 'Task',
       props: { page: 4 },
       component: Task
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      props: { page: 6 },
+      component: Test
     }
   ]
 })

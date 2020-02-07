@@ -172,9 +172,9 @@
             <mdb-card style="background-color: #3D5A80">
               <mdb-card-body>
                 <label style="color: white">สถานะ :</label>
-                <mdb-dropdown>
+                <mdb-dropdown disabled>
                   <mdb-dropdown-toggle color="primary" size="md" slot="toggle" class="z-depth-0" disabled>โปรดเลือก</mdb-dropdown-toggle>
-                  <mdb-dropdown-menu>
+                  <mdb-dropdown-menu >
                     <mdb-dropdown-item>TO DO</mdb-dropdown-item>
                     <mdb-dropdown-item>DEV TEST</mdb-dropdown-item>
                     <mdb-dropdown-item>IN PROGRESS</mdb-dropdown-item>
