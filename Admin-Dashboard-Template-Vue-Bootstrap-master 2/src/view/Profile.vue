@@ -100,8 +100,8 @@
                   </mdb-col>
                   <mdb-col md="6" class="md-0 mb-4">
                     <mdb-card class=" #2196f3 "  style="background-color: #3D5A80">
-                      <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
-                        <div>
+                      <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded" >
+                        <div style="width: 100%">
                           <h6 class="green-text">
 
                           </h6>
@@ -111,13 +111,13 @@
                           <br>
                           <p class="pb-3">
                             <mdb-input size="5" basic class="mb-1">
-                              <span class="input-group-text" slot="prepend">ต่ำแหน่ง:</span>
+                              <span class="input-group-text" slot="prepend">ตำแหน่ง:</span>
                             </mdb-input>
                             <br>
                             <mdb-input type="textarea" basic>
                               <span class="input-group-text" slot="prepend">พี่เลี้ยง:
                               <br>
-                                ต่ำแหน่ง:
+                                ตำแหน่ง:
                               </span>
                             </mdb-input>
                             <br>

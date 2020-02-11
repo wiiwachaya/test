@@ -39,11 +39,36 @@
     <mdb-btn tag="a" floating action class="ml-auto mr-9 mdb-color lighten-4">
       <mdb-icon icon="chevron-right" class="pl-2" />
     </mdb-btn>
-    <mdb-masonry :numCols="3" :maxHeight="1000">
-      <mdb-masonry-item :order="1" :itemStyle="{'height': '250px'}">ผู้เข้าร่วม</mdb-masonry-item>
-      <mdb-masonry-item :order="2" :itemStyle="{'height': '250px'}">ผู้เข้าร่วม</mdb-masonry-item>
-      <mdb-masonry-item :order="0" :itemStyle="{'height': '250px'}">ผู้เข้าร่วม</mdb-masonry-item>
-    </mdb-masonry>
+    <br>
+    <mdb-btn-group>
+      <mdb-btn color="primary" @click.native="toggleActiveState5" :active="active5">
+        <mdb-card style="width: 15rem;">
+          <mdb-card-body>
+            <mdb-card-title>Special title treatment</mdb-card-title>
+            <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+            <mdb-btn color="primary">go somewhere</mdb-btn>
+          </mdb-card-body>
+        </mdb-card>
+      </mdb-btn>
+      <mdb-btn color="primary" @click.native="toggleActiveState6" :active="active6">
+        <mdb-card style="width: 15rem;">
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="primary">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+      </mdb-btn>
+      <mdb-btn color="primary" @click.native="toggleActiveState7" :active="active7">
+        <mdb-card style="width: 15rem;">
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="primary">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+      </mdb-btn>
+    </mdb-btn-group>
     </div>
 </template>
 
@@ -63,7 +88,12 @@ import {
   mdbPageItem,
   mdbPageNav,
   mdbCarousel,
-  mdbRating
+  mdbRating,
+  mdbCard,
+  mdbCardBody,
+  mdbCardHeader,
+  mdbCardTitle,
+  mdbCardText
 } from 'mdbvue'
 export default {
   components: {
@@ -80,7 +110,12 @@ export default {
     mdbPageItem,
     mdbPageNav,
     mdbCarousel,
-    mdbRating
+    mdbRating,
+    mdbCard,
+    mdbCardBody,
+    mdbCardHeader,
+    mdbCardTitle,
+    mdbCardText
   }
 }
 </script>
