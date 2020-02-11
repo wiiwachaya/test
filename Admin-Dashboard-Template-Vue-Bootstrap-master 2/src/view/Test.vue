@@ -1,150 +1,103 @@
 <template>
-    <div>
-      <div v-if="type === 'A'">
-        I am A
-      </div>
-      <div v-else-if="type === 'B'">
-        I am B
-      </div>
-      <div v-else-if="type === 'C'">
-        I am C
-      </div>
-      <div v-else>
-        Not A/B/C
-      </div>
+  <div>
+    <mdb-btn v-b-modal.modal-prevent-closing>Open Modal</mdb-btn>
 
-      <div>
-        <mdb-row>
-          <mdb-col col="3" v-for="(item, index) in mData" :key="index">
-            <mdb-card>
-              <mdb-card-title style="text-align: end">
-                <mdb-dropdown>
-                  <mdb-dropdown-toggle slot="toggle" size="sm"><mdb-icon fas icon="ellipsis-h" size="lg"/></mdb-dropdown-toggle>
-                  <mdb-dropdown-menu>
-                    <mdb-dropdown-item>ดูข้อมูล</mdb-dropdown-item>
-                    <mdb-dropdown-item>ลบข้อมูล</mdb-dropdown-item>
-                  </mdb-dropdown-menu>
-                </mdb-dropdown>
-              </mdb-card-title>
-              <mdb-card-body style="text-align: center">
-                <mdb-card-image>
-                </mdb-card-image>
-                <h1>{{item.name}}</h1><br>
-                <p>
-                  <mdb-icon icon="phone-alt" size="sm" /> &nbsp;{{item.tel}}<br>
-                  <mdb-icon icon="envelope" size="sm" /> &nbsp;{{item.mail}} <br>
-                  <mdb-icon fab icon="line" size="sm" /> &nbsp;{{item.line}}
-                </p>
-              </mdb-card-body>
-            </mdb-card><br>
-          </mdb-col>
-        </mdb-row>
-        </div>
+    <div class="mt-3">
+      Submitted Names:
+      <div v-if="submittedNames.length === 0">--</div>
+      <mdb-row v-else class="mb-0 pl-3">
+        <mdb-col v-for="(name, index) in submittedNames" :key="index">{{ name }}</mdb-col>
+      </mdb-row>
     </div>
+
+    <v-modal
+      id="modal-prevent-closing"
+      ref="modal"
+      title="Submit Your Name"
+      @show="resetModal"
+      @hidden="resetModal"
+      @ok="handleOk"
+    >
+      <mdb-form ref="form" @submit.stop.prevent="handleSubmit">
+        <b-form-group
+          :state="nameState"
+          label="Name"
+          label-for="name-input"
+          invalid-feedback="Name is required"
+        >
+          <b-form-input
+            id="name-input"
+            v-model="name"
+            :state="nameState"
+            required
+          ></b-form-input>
+        </b-form-group>
+      </mdb-form>
+    </v-modal>
+  </div>
 </template>
 
 <script>
-import { mdbContainer,
-  mdbCol,
-  mdbRow,
-  mdbIcon,
-  mdbTabs,
-  mdbCard,
-  mdbCardImage,
-  mdbCardBody,
-  mdbCardTitle,
-  mdbCardText,
+import {
   mdbBtn,
-  mdbJumbotron,
-  mdbView,
-  mdbMask,
-  mdbTextarea,
-  mdbInput,
-  mdbBtnGroup,
-  mdbBtnToolbar,
+  mdbCol,
+  mdbIcon,
   mdbModal,
-  mdbModalHeader,
-  mdbModalTitle,
   mdbModalBody,
   mdbModalFooter,
-  mdbDropdown,
-  mdbDropdownItem,
-  mdbDropdownMenu,
-  mdbDropdownToggle} from 'mdbvue'
+  mdbModalHeader,
+  mdbModalTitle,
+  mdbRow
+} from 'mdbvue'
+
 export default {
-  name: 'Test',
   components: {
-    mdbContainer,
-    mdbCol,
-    mdbRow,
     mdbIcon,
-    mdbTabs,
-    mdbCard,
-    mdbCardImage,
-    mdbCardBody,
-    mdbCardTitle,
-    mdbCardText,
     mdbBtn,
-    mdbJumbotron,
-    mdbView,
-    mdbMask,
-    mdbTextarea,
-    mdbInput,
-    mdbBtnGroup,
-    mdbBtnToolbar,
+    mdbRow,
+    mdbCol,
     mdbModal,
     mdbModalHeader,
     mdbModalTitle,
     mdbModalBody,
-    mdbModalFooter,
-    mdbDropdown,
-    mdbDropdownItem,
-    mdbDropdownMenu,
-    mdbDropdownToggle
+    mdbModalFooter
   },
   data () {
     return {
-      type: 'A',
-      mData: [
-        {name: 'test1',
-          tel: '001-0000001',
-          mail: 'email1@gmail.com',
-          line: 'lineline1'
-        }, {name: 'test2',
-          tel: '002-0000002',
-          mail: 'email2@gmail.com',
-          line: 'lineline2'
-        }, {name: 'test3',
-          tel: '003-0000003',
-          mail: 'email3@gmail.com',
-          line: 'lineline3'
-        }, {name: 'test4',
-          tel: '004-0000004',
-          mail: 'email4@gmail.com',
-          line: 'lineline4'
-        }, {name: 'test5',
-          tel: '005-0000005',
-          mail: 'email5@gmail.com',
-          line: 'lineline5'
-        }, {name: 'test6',
-          tel: '006-0000006',
-          mail: 'email6@gmail.com',
-          line: 'lineline6'
-        }, {name: 'test7',
-          tel: '007-0000007',
-          mail: 'email7@gmail.com',
-          line: 'lineline7'
-        }, {name: 'test8',
-          tel: '008-0000008',
-          mail: 'email8@gmail.com',
-          line: 'lineline8'
-        }
-      ]
+      modal: false,
+      name: '',
+      nameState: null,
+      submittedNames: []
+    }
+  },
+  methods: {
+    checkFormValidity () {
+      const valid = this.$refs.form.checkValidity()
+      this.nameState = valid
+      return valid
+    },
+    resetModal () {
+      this.name = ''
+      this.nameState = null
+    },
+    handleOk (bvModalEvt) {
+      // Prevent modal from closing
+      bvModalEvt.preventDefault()
+      // Trigger submit handler
+      this.handleSubmit()
+    },
+    handleSubmit () {
+      // Exit when the form isn't valid
+      if (!this.checkFormValidity()) {
+        return
+      }
+      // Push the name to submitted names
+      this.submittedNames.push(this.name)
+      // Hide the modal manually
+      this.$nextTick(() => {
+        this.$bvModal.hide('modal-prevent-closing')
+      })
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

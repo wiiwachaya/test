@@ -7,7 +7,14 @@
         <mdb-navbar-nav right>
           <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="search" style="color: white"/></mdb-nav-item>
           <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="bell" style="color: white"/></mdb-nav-item>
-          <mdb-nav-item href="#!" waves-fixed><mdb-icon icon="user-alt" style="color: white"/></mdb-nav-item>
+          <mdb-dropdown tag="li" class="nav-item">
+            <mdb-dropdown-toggle tag="a" navLink slot="toggle" waves-fixed>
+              <mdb-icon icon="user-alt" style="color: white"/></mdb-dropdown-toggle>
+            <mdb-dropdown-menu right>
+              <mdb-dropdown-item>เข้าสู่ระบบ</mdb-dropdown-item>
+              <mdb-dropdown-item>ลงทะเบียน</mdb-dropdown-item>
+            </mdb-dropdown-menu>
+          </mdb-dropdown>
         </mdb-navbar-nav>
       </mdb-navbar-toggler>
     </mdb-navbar>
@@ -30,6 +37,9 @@
         </router-link>
         <router-link to="/profile" @click.native="activeItem = 5">
           <mdb-list-group-item :action="true" :class="activeItem === 5 && 'active'"><mdb-icon icon="user" class="mr-3"/>โปร์ไฟล์</mdb-list-group-item>
+        </router-link>
+        <router-link to="/test" @click.native="activeItem = 6">
+          <mdb-list-group-item :action="true" :class="activeItem === 6 && 'active'"><mdb-icon icon="user" class="mr-3"/>ทดสอบ</mdb-list-group-item>
         </router-link>
       </mdb-list-group>
     </div>
@@ -59,7 +69,23 @@
 </template>
 
 <script>
-import { mdbContainer, mdbNavbar, mdbNavbarBrand, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, mdbBtn, mdbIcon, mdbListGroup, mdbListGroupItem, mdbCardBody, mdbFooter, waves } from 'mdbvue'
+import { mdbContainer,
+  mdbNavbar,
+  mdbNavbarBrand,
+  mdbNavItem,
+  mdbNavbarNav,
+  mdbNavbarToggler,
+  mdbBtn,
+  mdbIcon,
+  mdbListGroup,
+  mdbListGroupItem,
+  mdbCardBody,
+  mdbFooter,
+  mdbDropdown,
+  mdbDropdownMenu,
+  mdbDropdownToggle,
+  mdbDropdownItem,
+  waves } from 'mdbvue'
 import Dashboard from './components/Dashboard'
 import Profile from './components/Profile'
 
@@ -77,6 +103,10 @@ export default {
     mdbListGroupItem,
     mdbIcon,
     mdbCardBody,
+    mdbDropdown,
+    mdbDropdownMenu,
+    mdbDropdownToggle,
+    mdbDropdownItem,
     'ftr': mdbFooter,
     Dashboard,
     Profile

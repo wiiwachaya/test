@@ -39,12 +39,13 @@
             <br>
             <mdb-container>
               <mdb-row>
-                <mdb-col col="3" v-for="(item, index) in mData" :key="index">
+                <mdb-col col="4" v-for="(item, index) in mData" :key="index">
                   <mdb-card>
                     <mdb-card-title style="text-align: end">
-                      <mdb-dropdown>
-                        <mdb-dropdown-toggle slot="toggle" size="sm"><mdb-icon fas icon="ellipsis-h" size="lg"/></mdb-dropdown-toggle>
-                        <mdb-dropdown-menu>
+                      <mdb-dropdown tag="li" class="nav-item">
+                        <mdb-dropdown-toggle tag="a" navLink slot="toggle" size="sm" waves-fixed>
+                          <mdb-icon fas icon="ellipsis-h" size="lg"/></mdb-dropdown-toggle>
+                        <mdb-dropdown-menu right>
                           <mdb-dropdown-item>ดูข้อมูล</mdb-dropdown-item>
                           <mdb-dropdown-item @click ="remodel(index)">ลบข้อมูล</mdb-dropdown-item>
                         </mdb-dropdown-menu>
@@ -54,11 +55,18 @@
                       <mdb-card-image>
                       </mdb-card-image>
                       <h1>{{item.name}}</h1><br>
-                      <p>
-                        <mdb-icon icon="phone-alt" size="sm" /> &nbsp;{{item.tel}}<br>
-                        <mdb-icon icon="envelope" size="sm" /> &nbsp;{{item.mail}} <br>
-                        <mdb-icon fab icon="line" size="sm" /> &nbsp;{{item.line}}
-                      </p>
+                      <mdb-row>
+                        <mdb-col col="1"><mdb-icon icon="phone-alt" size="sm" /></mdb-col>
+                        <mdb-col style="text-align: start">{{item.tel}}</mdb-col>
+                      </mdb-row>
+                      <mdb-row>
+                        <mdb-col col="1"><mdb-icon icon="envelope" size="sm" /></mdb-col>
+                        <mdb-col style="text-align: start">{{item.mail}}</mdb-col>
+                      </mdb-row>
+                      <mdb-row>
+                        <mdb-col col="1"><mdb-icon fab icon="line" size="sm" /></mdb-col>
+                        <mdb-col style="text-align: start">{{item.line}}</mdb-col>
+                      </mdb-row>
                     </mdb-card-body>
                   </mdb-card><br>
                 </mdb-col>
@@ -81,14 +89,15 @@
             <br>
             <mdb-container>
               <mdb-row>
-                <mdb-col col="3" v-for="(item, index) in mData" :key="index">
+                <mdb-col col="4" v-for="(item, index) in mData" :key="index">
                   <mdb-card>
                     <mdb-card-title style="text-align: end">
-                      <mdb-dropdown>
-                        <mdb-dropdown-toggle slot="toggle" size="sm"><mdb-icon fas icon="ellipsis-h" size="lg"/></mdb-dropdown-toggle>
-                        <mdb-dropdown-menu>
+                      <mdb-dropdown tag="li" class="nav-item">
+                        <mdb-dropdown-toggle tag="a" navLink slot="toggle" size="sm" waves-fixed>
+                          <mdb-icon fas icon="ellipsis-h" size="lg"/></mdb-dropdown-toggle>
+                        <mdb-dropdown-menu right>
                           <mdb-dropdown-item>ดูข้อมูล</mdb-dropdown-item>
-                          <mdb-dropdown-item>ลบข้อมูล</mdb-dropdown-item>
+                          <mdb-dropdown-item @click ="remodel(index)">ลบข้อมูล</mdb-dropdown-item>
                         </mdb-dropdown-menu>
                       </mdb-dropdown>
                     </mdb-card-title>
@@ -96,9 +105,18 @@
                       <mdb-card-image>
                       </mdb-card-image>
                       <h1>{{item.name}}</h1><br>
-                        <mdb-icon icon="phone-alt" size="sm" /> &nbsp;{{item.tel}}<br>
-                        <mdb-icon icon="envelope" size="sm" /> &nbsp;{{item.mail}} <br>
-                        <mdb-icon fab icon="line" size="sm" /> &nbsp;{{item.line}}
+                      <mdb-row>
+                        <mdb-col col="1"><mdb-icon icon="phone-alt" size="sm" /></mdb-col>
+                        <mdb-col style="text-align: start">{{item.tel}}</mdb-col>
+                      </mdb-row>
+                      <mdb-row>
+                        <mdb-col col="1"><mdb-icon icon="envelope" size="sm" /></mdb-col>
+                        <mdb-col style="text-align: start">{{item.mail}}</mdb-col>
+                      </mdb-row>
+                      <mdb-row>
+                        <mdb-col col="1"><mdb-icon fab icon="line" size="sm" /></mdb-col>
+                        <mdb-col style="text-align: start">{{item.line}}</mdb-col>
+                      </mdb-row>
                     </mdb-card-body>
                   </mdb-card><br>
                 </mdb-col>
@@ -109,14 +127,15 @@
             <br>
             <mdb-container>
               <mdb-row>
-                <mdb-col col="3" v-for="(item, index) in mData" :key="index">
+                <mdb-col col="4" v-for="(item, index) in mData" :key="index">
                   <mdb-card>
                     <mdb-card-title style="text-align: end">
-                      <mdb-dropdown>
-                        <mdb-dropdown-toggle slot="toggle" size="sm"><mdb-icon fas icon="ellipsis-h" size="lg"/></mdb-dropdown-toggle>
-                        <mdb-dropdown-menu>
+                      <mdb-dropdown tag="li" class="nav-item">
+                        <mdb-dropdown-toggle tag="a" navLink slot="toggle" size="sm" waves-fixed>
+                          <mdb-icon fas icon="ellipsis-h" size="lg"/></mdb-dropdown-toggle>
+                        <mdb-dropdown-menu right>
                           <mdb-dropdown-item>ดูข้อมูล</mdb-dropdown-item>
-                          <mdb-dropdown-item>ลบข้อมูล</mdb-dropdown-item>
+                          <mdb-dropdown-item @click ="remodel(index)">ลบข้อมูล</mdb-dropdown-item>
                         </mdb-dropdown-menu>
                       </mdb-dropdown>
                     </mdb-card-title>
@@ -124,11 +143,18 @@
                       <mdb-card-image>
                       </mdb-card-image>
                       <h1>{{item.name}}</h1><br>
-                      <p>
-                        <mdb-icon icon="phone-alt" size="sm" /> &nbsp;{{item.tel}}<br>
-                        <mdb-icon icon="envelope" size="sm" /> &nbsp;{{item.mail}} <br>
-                        <mdb-icon fab icon="line" size="sm" /> &nbsp;{{item.line}}
-                      </p>
+                      <mdb-row>
+                        <mdb-col col="1"><mdb-icon icon="phone-alt" size="sm" /></mdb-col>
+                        <mdb-col style="text-align: start">{{item.tel}}</mdb-col>
+                      </mdb-row>
+                      <mdb-row>
+                        <mdb-col col="1"><mdb-icon icon="envelope" size="sm" /></mdb-col>
+                        <mdb-col style="text-align: start">{{item.mail}}</mdb-col>
+                      </mdb-row>
+                      <mdb-row>
+                        <mdb-col col="1"><mdb-icon fab icon="line" size="sm" /></mdb-col>
+                        <mdb-col style="text-align: start">{{item.line}}</mdb-col>
+                      </mdb-row>
                     </mdb-card-body>
                   </mdb-card><br>
                 </mdb-col>
@@ -199,6 +225,7 @@ export default {
   },
   data () {
     return {
+      mainProps: { blank: true, blankColor: '#777', width: 75, height: 75, class: 'm1' },
       modal: false,
       rmmodal: false,
       remodel (index) {
@@ -237,6 +264,10 @@ export default {
           tel: '008-0000008',
           mail: 'email8@gmail.com',
           line: 'lineline8'
+        }, {name: '',
+          tel: '',
+          mail: '',
+          line: ''
         }
       ]
     }
