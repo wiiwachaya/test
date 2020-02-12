@@ -1,103 +1,64 @@
 <template>
-  <div>
-    <mdb-btn v-b-modal.modal-prevent-closing>Open Modal</mdb-btn>
-
-    <div class="mt-3">
-      Submitted Names:
-      <div v-if="submittedNames.length === 0">--</div>
-      <mdb-row v-else class="mb-0 pl-3">
-        <mdb-col v-for="(name, index) in submittedNames" :key="index">{{ name }}</mdb-col>
-      </mdb-row>
+  <div id="demo6">
+    <form v-on:submit.prevent="submit">
+      <div>
+      <label for="first_name"> FirstName</label>
+      <input type="text" name="first_name" v-model="applicant.first_name">
     </div>
 
-    <v-modal
-      id="modal-prevent-closing"
-      ref="modal"
-      title="Submit Your Name"
-      @show="resetModal"
-      @hidden="resetModal"
-      @ok="handleOk"
-    >
-      <mdb-form ref="form" @submit.stop.prevent="handleSubmit">
-        <b-form-group
-          :state="nameState"
-          label="Name"
-          label-for="name-input"
-          invalid-feedback="Name is required"
-        >
-          <b-form-input
-            id="name-input"
-            v-model="name"
-            :state="nameState"
-            required
-          ></b-form-input>
-        </b-form-group>
-      </mdb-form>
-    </v-modal>
+      <div>
+        <label for="first_name"> LastName</label>
+        <input type="text" name="last_name" v-model="applicant.last_name">
+      </div>
+
+      <div>
+        <label for="first_name">Male</label>
+        <input type="radio" name="sex" v-model="applicant.male_name">
+        <label for="first_name"> Female</label>
+        <input type="radio" name="sex" v-model="applicant.female_name">
+      </div>
+
+      <div>
+        <select name="courses" v-model="applicant.course">
+          <option value="react">21</option>
+          <option value="react">22</option>
+          <option value="react">23</option>
+        </select>
+      </div>
+      <button type="clear" @click="clear">Clear</button>
+      <button type="submit">Submit</button>
+  </form>
   </div>
 </template>
 
 <script>
-import {
-  mdbBtn,
-  mdbCol,
-  mdbIcon,
-  mdbModal,
-  mdbModalBody,
-  mdbModalFooter,
-  mdbModalHeader,
-  mdbModalTitle,
-  mdbRow
-} from 'mdbvue'
 
 export default {
-  components: {
-    mdbIcon,
-    mdbBtn,
-    mdbRow,
-    mdbCol,
-    mdbModal,
-    mdbModalHeader,
-    mdbModalTitle,
-    mdbModalBody,
-    mdbModalFooter
-  },
+  name: 'demo6',
   data () {
     return {
-      modal: false,
-      name: '',
-      nameState: null,
-      submittedNames: []
+      applicant: {
+        first_name: 'nesara',
+        last_name: 'ruenpaan',
+        sex: 'male',
+        course: 'react'
+      }
     }
   },
   methods: {
-    checkFormValidity () {
-      const valid = this.$refs.form.checkValidity()
-      this.nameState = valid
-      return valid
+    submit (event) {
+      // event.preventDefault()
+      alert(JSON.stringify(this.applicant))
     },
-    resetModal () {
-      this.name = ''
-      this.nameState = null
-    },
-    handleOk (bvModalEvt) {
-      // Prevent modal from closing
-      bvModalEvt.preventDefault()
-      // Trigger submit handler
-      this.handleSubmit()
-    },
-    handleSubmit () {
-      // Exit when the form isn't valid
-      if (!this.checkFormValidity()) {
-        return
+    clear () {
+      this.applicant = {
+        first_name: '',
+        last_name: '',
+        sex: 'male',
+        course: 'react'
       }
-      // Push the name to submitted names
-      this.submittedNames.push(this.name)
-      // Hide the modal manually
-      this.$nextTick(() => {
-        this.$bvModal.hide('modal-prevent-closing')
-      })
     }
   }
 }
+
 </script>

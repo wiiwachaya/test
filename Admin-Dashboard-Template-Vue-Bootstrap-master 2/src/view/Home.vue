@@ -33,38 +33,38 @@
     <mdb-col>
       <h2>กิจกรรมที่ต้องเข้าร่วม</h2>
     </mdb-col>
-    <mdb-btn tag="a" floating action class="ml-auto mr-5 mdb-color lighten-4">
-      <mdb-icon icon="chevron-left" class="pl-2" />
-    </mdb-btn>
-    <mdb-btn tag="a" floating action class="ml-auto mr-9 mdb-color lighten-4">
-      <mdb-icon icon="chevron-right" class="pl-2" />
-    </mdb-btn>
     <br>
     <mdb-btn-group>
       <mdb-btn color="primary" @click.native="toggleActiveState5" :active="active5">
         <mdb-card style="width: 15rem;">
           <mdb-card-body>
-            <mdb-card-title>Special title treatment</mdb-card-title>
+            <router-link to="/calendar" @click.native="activeItem = 2">
+            <mdb-card-title>ผู้เข้าร่วม</mdb-card-title>
             <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
             <mdb-btn color="primary">go somewhere</mdb-btn>
+            </router-link>
           </mdb-card-body>
         </mdb-card>
       </mdb-btn>
       <mdb-btn color="primary" @click.native="toggleActiveState6" :active="active6">
         <mdb-card style="width: 15rem;">
         <mdb-card-body>
-          <mdb-card-title>Special title treatment</mdb-card-title>
+          <router-link to="/calendar" @click.native="activeItem = 2">
+          <mdb-card-title>ผู้เข้าร่วม</mdb-card-title>
           <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
           <mdb-btn color="primary">go somewhere</mdb-btn>
+          </router-link>
         </mdb-card-body>
       </mdb-card>
       </mdb-btn>
       <mdb-btn color="primary" @click.native="toggleActiveState7" :active="active7">
         <mdb-card style="width: 15rem;">
         <mdb-card-body>
-          <mdb-card-title>Special title treatment</mdb-card-title>
+          <router-link to="/calendar" @click.native="activeItem = 2">
+          <mdb-card-title>ผู้เข้าร่วม</mdb-card-title>
           <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
           <mdb-btn color="primary">go somewhere</mdb-btn>
+          </router-link>
         </mdb-card-body>
       </mdb-card>
       </mdb-btn>

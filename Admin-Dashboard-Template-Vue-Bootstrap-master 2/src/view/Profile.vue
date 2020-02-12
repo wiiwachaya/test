@@ -1,10 +1,10 @@
 <template>
-  <section id="task">
+  <section id="demo6">
     <mdb-card-title cascade narrow class="mt-2">
       <mdb-view class="gradient-card-header blue darken-2">
         <mdb-row>
         <mdb-col><h2 class="responsive text-white">
-          Name Surname
+        Nesara Ruenpaan
         </h2></mdb-col>
         <mdb-col style="text-align: end">
           <!----- ปุ่มแก้ไขข้อมูล ------>
@@ -24,13 +24,13 @@
             </mdb-col>
             <mdb-col><br>
               <section class="preview">
-                <mdb-input size="3" basic class="mb-4">
+                <mdb-input size="3" basic class="mb-4" v-model="applicant.email">
                   <span class="input-group-text" slot="prepend">Email:</span>
                 </mdb-input>
-                <mdb-input size="3" basic class="mb-4">
+                <mdb-input size="3" basic class="mb-4" v-model="applicant.tel">
                   <span class="input-group-text" slot="prepend">Tel:</span>
                 </mdb-input>
-                <mdb-input size="3" basic class="mb-4">
+                <mdb-input size="3" basic class="mb-4" v-model="applicant.line">
                   <span class="input-group-text" slot="prepend">Line:</span>
                 </mdb-input>
 
@@ -50,29 +50,30 @@
             </mdb-card-title>
             <mdb-card-body>
               <section class="preview">
-                <mdb-input basic aria-label="First name">
+                <mdb-input basic aria-label="First name" v-model="applicant.first_name">
                   <span class="input-group-text" slot="prepend">ชื่อ-นามสกุล:</span>
-                  <mdb-input noWrapper aria-label="Last name"/>
+                  <mdb-input noWrapper aria-label="Last name" v-model="applicant.last_name"/>
                 </mdb-input>
               </section>
               <br>
-              <mdb-input size="3" basic class="mb-4">
+              <mdb-input size="3" basic class="mb-4" v-model="applicant.birthDate">
                 <span class="input-group-text" slot="prepend">วัน/เดือน/ปีเกิด:</span>
               </mdb-input>
-              <mdb-input size="4" basic class="mb-4">
+              <mdb-input size="4" basic class="mb-4" v-model="applicant.sex">
                 <span class="input-group-text" slot="prepend">เพศ:</span>
               </mdb-input>
-              <mdb-input type="textarea" basic>
+              <mdb-input type="textarea" basic v-model="applicant.address">
                 <span class="input-group-text" slot="prepend">ที่อยู่:</span>
               </mdb-input>
               <br>
-              <mdb-input type="textarea" basic>
-                            <span class="input-group-text" slot="prepend">มหาวิทยาลัย:
-                            <br>
-                              คณะ:
-                              <br>
-                              สาขาวิชา:
-                            </span>
+              <mdb-input size="4" basic class="mb-4" v-model="applicant.university">
+                <span class="input-group-text" slot="prepend">มหาวิทยาลัย:</span>
+              </mdb-input>
+              <mdb-input size="4" basic class="mb-4" v-model="applicant.faculty">
+                <span class="input-group-text" slot="prepend">คณะ:</span>
+              </mdb-input>
+              <mdb-input size="4" basic class="mb-4" v-model="applicant.major">
+                <span class="input-group-text" slot="prepend">สาขาวิชา:</span>
               </mdb-input>
             </mdb-card-body></mdb-card>
           </mdb-col>
@@ -85,19 +86,20 @@
                 </mdb-view>
               </mdb-card-title>
               <mdb-card-body>
-                <mdb-input size="5" basic class="mb-1">
+                <mdb-input size="5" basic class="mb-1" v-model="applicant.position">
                   <span class="input-group-text" slot="prepend">ตำแหน่ง:</span>
                 </mdb-input>
                 <br>
-                <mdb-input type="textarea" basic>
-                              <span class="input-group-text" slot="prepend">พี่เลี้ยง:
-                              <br>
-                                ตำแหน่ง:
-                              </span>
+                <mdb-input type="textarea" basic v-model="applicant.time_work">
+                  <span class="input-group-text" slot="prepend">ระยะเวลาฝึกงาน:</span>
                 </mdb-input>
                 <br>
-                <mdb-input type="textarea" basic>
-                  <span class="input-group-text" slot="prepend">ระยะเวลาฝึกงาน:</span>
+                <mdb-input size="5" basic class="mb-1" v-model="applicant.name">
+                  <span class="input-group-text" slot="prepend">ชื่อพี่เลี้ยง:</span>
+                </mdb-input>
+                <br>
+                <mdb-input size="5" basic class="mb-1" v-model="applicant.positions">
+                  <span class="input-group-text" slot="prepend">ตำแหน่งพี่เลี้ยง:</span>
                 </mdb-input>
               </mdb-card-body></mdb-card>
           </mdb-col>
@@ -141,7 +143,7 @@ import {
 } from 'mdbvue'
 
 export default {
-  name: 'Task',
+  name: 'demo6',
   components: {
     mdbRow,
     mdbCol,
@@ -182,152 +184,23 @@ export default {
 
   data () {
     return {
-      showFrameModalTop: false,
-      showFrameModalBottom: false,
-      showSideModalTopRight: false,
-      showSideModalTopLeft: false,
-      showSideModalBottomRight: false,
-      showSideModalBottomLeft: false,
-      showCentralModalSmall: false,
-      showCentralModalMedium: false,
-      showCentralModalLarge: false,
-      showCentralModalFluid: false,
-      showFluidModalRight: false,
-      showFluidModalLeft: false,
-      showFluidModalTop: false,
-      showFluidModalBottom: false,
-      barChartData: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-        datasets: [
-          {
-            label: '#1',
-            data: [12, 39, 3, 50, 2, 32, 84],
-            backgroundColor: 'rgba(245, 74, 85, 0.5)',
-            borderWidth: 1
-          }, {
-            label: '#2',
-            data: [56, 24, 5, 16, 45, 24, 8],
-            backgroundColor: 'rgba(90, 173, 246, 0.5)',
-            borderWidth: 1
-          }, {
-            label: '#3',
-            data: [12, 25, 54, 3, 15, 44, 3],
-            backgroundColor: 'rgba(245, 192, 50, 0.5)',
-            borderWidth: 1
-          }
-        ]
-      },
-      barChartOptions: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          xAxes: [{
-            barPercentage: 1,
-            gridLines: {
-              display: true,
-              color: 'rgba(0, 0, 0, 0.1)'
-            }
-          }],
-          yAxes: [{
-            gridLines: {
-              display: true,
-              color: 'rgba(0, 0, 0, 0.1)'
-            },
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      },
-      pieChartData: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-        datasets: [
-          {
-            data: [300, 50, 100, 40, 120, 24, 52],
-            backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360', '#ac64ad'],
-            hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774', '#da92db']
-          }
-        ]
-      },
-      pieChartOptions: {
-        responsive: true,
-        maintainAspectRatio: false
-      },
-      lineChartData: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-        datasets: [
-          {
-            label: '#1',
-            backgroundColor: 'rgba(245, 74, 85, 0.5)',
-            data: [65, 59, 80, 81, 56, 55, 40]
-          },
-          {
-            label: '#2',
-            backgroundColor: 'rgba(90, 173, 246, 0.5)',
-            data: [12, 42, 121, 56, 24, 12, 2]
-          },
-          {
-            label: '#3',
-            backgroundColor: 'rgba(245, 192, 50, 0.5)',
-            data: [2, 123, 154, 76, 54, 23, 5]
-          }
-        ]
-      },
-      lineChartOptions: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          xAxes: [{
-            gridLines: {
-              display: true,
-              color: 'rgba(0, 0, 0, 0.1)'
-            }
-          }],
-          yAxes: [{
-            gridLines: {
-              display: true,
-              color: 'rgba(0, 0, 0, 0.1)'
-            }
-          }]
-        }
-      },
-      radarChartData: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-        datasets: [
-          {
-            label: '#1',
-            backgroundColor: 'rgba(245, 74, 85, 0.5)',
-            data: [65, 59, 80, 81, 56, 55, 40]
-          },
-          {
-            label: '#2',
-            backgroundColor: 'rgba(90, 173, 246, 0.5)',
-            data: [12, 42, 121, 56, 24, 12, 2]
-          },
-          {
-            label: '#3',
-            backgroundColor: 'rgba(245, 192, 50, 0.5)',
-            data: [2, 123, 154, 76, 54, 23, 5]
-          }
-        ]
-      },
-      radarChartOptions: {
-        responsive: true,
-        maintainAspectRatio: false
-      },
-      doughnutChartData: {
-        labels: ['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey'],
-        datasets: [
-          {
-            data: [300, 50, 100, 40, 120],
-            backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
-            hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774']
-          }
-        ]
-      },
-      doughnutChartOptions: {
-        responsive: true,
-        maintainAspectRatio: false
+      applicant: {
+        email: 'nesara134@gmail.com',
+        tel: '0909121948',
+        line: 'nesara',
+        birthDate: '04/06/40',
+        address: 'ฟ้าฮ่าม 50000',
+        university: 'มหาลัยราชภัฎ',
+        faculty: 'วิทยาศาสตร์',
+        major: 'การโปรแกรม',
+        position: 'Front-end Developer',
+        name: 'aey rajcharin',
+        positions: 'Tech Manager',
+        time_work: '4 พ.ย.62 - 21ก.พ.63',
+        first_name: 'nesara',
+        last_name: 'ruenpaan',
+        sex: 'หญิง',
+        course: 'react'
       }
     }
   }
