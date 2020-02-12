@@ -1,147 +1,108 @@
 <template>
   <section id="task">
-    <mdb-card cascade narrow class="mt-2">
+    <mdb-card-title cascade narrow class="mt-2">
       <mdb-view class="gradient-card-header blue darken-2">
-        <h4 class="h2-responsive text-white">
+        <mdb-row>
+        <mdb-col><h2 class="responsive text-white">
           Name Surname
-        </h4>
+        </h2></mdb-col>
+        <mdb-col style="text-align: end">
+          <!----- ปุ่มแก้ไขข้อมูล ------>
+          <mdb-btn color="success">แก้ไขข้อมูล</mdb-btn></mdb-col>
+      </mdb-row>
       </mdb-view>
+    </mdb-card-title>
+      <mdb-card-body style="background-color: white">
+        <!----- ข้อมูลโซเชี่ยล ------>
+      <mdb-card style="background-color: #3D5A80" class="mb-3">
+        <mdb-row class="mb-3 my-3">
+          <mdb-col col="1"></mdb-col>
+          <mdb-col col="3">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
+                   class="img-fluid z-depth-1 rounded-circle"
+                          alt="Responsive image">
+            </mdb-col>
+            <mdb-col><br>
+              <section class="preview">
+                <mdb-input size="3" basic class="mb-4">
+                  <span class="input-group-text" slot="prepend">Email:</span>
+                </mdb-input>
+                <mdb-input size="3" basic class="mb-4">
+                  <span class="input-group-text" slot="prepend">Tel:</span>
+                </mdb-input>
+                <mdb-input size="3" basic class="mb-4">
+                  <span class="input-group-text" slot="prepend">Line:</span>
+                </mdb-input>
 
-      <mdb-modal-footer right>
-        <mdb-btn @click.native="แก้ไขข้อมูล = false" color="success">แก้ไขข้อมูล</mdb-btn>
-      </mdb-modal-footer>
-
-      <mdb-card-body class="text-center">
+              </section>
+            </mdb-col>
+          <mdb-col col="1"></mdb-col>
+        </mdb-row>
+          </mdb-card>
         <mdb-row>
           <mdb-col>
-            <mdb-container>
-
-              <section class="text-center my-3">
-                <h2 class="h1-responsive font-weight-bold my-1"></h2>
-                <p class="grey-text w-responsive mx-auto mb-1"></p>
-                  <mdb-row>
-                  <mdb-col md="12" class="mb-3">
-                    <mdb-card  style="background-color: #3D5A80">
-                      <div class="text-white text-center d-flex align-items-center px-4 rounded">
-                        <div>
-                          <h6 class="purple-text">
-                          </h6>
-                          <ul class="list-unstyled">
-                            <mdb-media tag="li">
-                              <!-- Grid column -->
-                              <mdb-col xl="5" md="4" class="mb-1 text-left">
-
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1 rounded-circle"
-                                     alt="Responsive image">
-
-                              </mdb-col>
-                              <!-- Grid column -->
-                              <mdb-media-body>
-                                <h5 class="mt-0 mb-1 font-weight-bold"></h5>
-                                <section class="preview">
-                                  <mdb-input size="3" basic class="mb-4">
-                                    <span class="input-group-text" slot="prepend">Email:</span>
-                                  </mdb-input>
-                                  <mdb-input size="3" basic class="mb-4">
-                                    <span class="input-group-text" slot="prepend">Tel:</span>
-                                  </mdb-input>
-                                  <mdb-input size="3" basic class="mb-4">
-                                    <span class="input-group-text" slot="prepend">Line:</span>
-                                  </mdb-input>
-
-                                </section>
-                              </mdb-media-body>
-                            </mdb-media>
-                          </ul>
-
-                        </div>
-                      </div>
-                    </mdb-card>
-                  </mdb-col>
-                  <mdb-col md="6" class="md-0 mb-4">
-                    <mdb-card  style="background-color: #3D5A80">
-                      <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
-                        <div>
-                          <h6 class="pink-text">
-
-                          </h6>
-                          <mdb-view gradient="blue" cascade>
-                            <h2 class="card-header-title">ข้อมูลทั่วไป</h2>
-                          </mdb-view>
-                          <br>
-                          <section class="preview">
-                            <mdb-input basic aria-label="First name">
-                              <span class="input-group-text" slot="prepend">ชื่อ-นามสกุล:</span>
-                              <mdb-input noWrapper aria-label="Last name"/>
-                            </mdb-input>
-                          </section>
-                          <br>
-                          <mdb-input size="3" basic class="mb-4">
-                            <span class="input-group-text" slot="prepend">วัน/เดือน/ปีเกิด:</span>
-                          </mdb-input>
-                          <mdb-input size="4" basic class="mb-4">
-                            <span class="input-group-text" slot="prepend">เพศ:</span>
-                          </mdb-input>
-                          <mdb-input type="textarea" basic>
-                            <span class="input-group-text" slot="prepend">ที่อยู่:</span>
-                          </mdb-input>
-                          <br>
-                          <mdb-input type="textarea" basic>
+            <!----- ข้อมูลทั่วไป ------>
+            <mdb-card style="background-color: #3D5A80" class="mb-5">
+            <mdb-card-title>
+              <mdb-view gradient="blue" cascade><br>
+              <h3 class="card-header-title" style="color: white ; text-align: center">ข้อมูลทั่วไป</h3>
+              </mdb-view>
+            </mdb-card-title>
+            <mdb-card-body>
+              <section class="preview">
+                <mdb-input basic aria-label="First name">
+                  <span class="input-group-text" slot="prepend">ชื่อ-นามสกุล:</span>
+                  <mdb-input noWrapper aria-label="Last name"/>
+                </mdb-input>
+              </section>
+              <br>
+              <mdb-input size="3" basic class="mb-4">
+                <span class="input-group-text" slot="prepend">วัน/เดือน/ปีเกิด:</span>
+              </mdb-input>
+              <mdb-input size="4" basic class="mb-4">
+                <span class="input-group-text" slot="prepend">เพศ:</span>
+              </mdb-input>
+              <mdb-input type="textarea" basic>
+                <span class="input-group-text" slot="prepend">ที่อยู่:</span>
+              </mdb-input>
+              <br>
+              <mdb-input type="textarea" basic>
                             <span class="input-group-text" slot="prepend">มหาวิทยาลัย:
                             <br>
                               คณะ:
                               <br>
                               สาขาวิชา:
                             </span>
-                          </mdb-input>
-                        </div>
-                      </div>
-                    </mdb-card>
-                  </mdb-col>
-                  <mdb-col md="6" class="md-0 mb-4">
-                    <mdb-card class=" #2196f3 "  style="background-color: #3D5A80">
-                      <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded" >
-                        <div style="width: 100%">
-                          <h6 class="green-text">
-
-                          </h6>
-                          <mdb-view gradient="blue" cascade>
-                            <h2 class="card-header-title">ข้อมูลในการทำงาน</h2>
-                          </mdb-view>
-                          <br>
-                          <p class="pb-3">
-                            <mdb-input size="5" basic class="mb-1">
-                              <span class="input-group-text" slot="prepend">ตำแหน่ง:</span>
-                            </mdb-input>
-                            <br>
-                            <mdb-input type="textarea" basic>
+              </mdb-input>
+            </mdb-card-body></mdb-card>
+          </mdb-col>
+          <mdb-col>
+            <!----- ข้อมูลทั่วไป ------>
+            <mdb-card style="background-color: #3D5A80" class="mb-5">
+              <mdb-card-title>
+                <mdb-view gradient="blue" cascade><br>
+                  <h3 class="card-header-title" style="color: white ; text-align: center">ข้อมูลในการทำงาน</h3>
+                </mdb-view>
+              </mdb-card-title>
+              <mdb-card-body>
+                <mdb-input size="5" basic class="mb-1">
+                  <span class="input-group-text" slot="prepend">ตำแหน่ง:</span>
+                </mdb-input>
+                <br>
+                <mdb-input type="textarea" basic>
                               <span class="input-group-text" slot="prepend">พี่เลี้ยง:
                               <br>
                                 ตำแหน่ง:
                               </span>
-                            </mdb-input>
-                            <br>
-                            <mdb-input type="textarea" basic>
-                              <span class="input-group-text" slot="prepend">ระยะเวลาฝึกงาน:</span>
-                            </mdb-input>
-                          </p>
-
-                        </div>
-                      </div>
-                    </mdb-card>
-                  </mdb-col>
-                </mdb-row>
-              </section>
-            </mdb-container>
-
+                </mdb-input>
+                <br>
+                <mdb-input type="textarea" basic>
+                  <span class="input-group-text" slot="prepend">ระยะเวลาฝึกงาน:</span>
+                </mdb-input>
+              </mdb-card-body></mdb-card>
           </mdb-col>
         </mdb-row>
-        <mdb-row>
-
-        </mdb-row>
-
       </mdb-card-body>
-    </mdb-card>
   </section>
 </template>
 
