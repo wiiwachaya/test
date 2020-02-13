@@ -27,13 +27,13 @@
             </mdb-col>
             <mdb-col><br>
               <section class="preview">
-                <mdb-input size="3" basic class="mb-4" v-model="applicant.email">
+                <mdb-input size="3" basic class="mb-4" v-model="applicant.email" disabled>
                   <span class="input-group-text" slot="prepend">Email:</span>
                 </mdb-input>
-                <mdb-input size="3" basic class="mb-4" v-model="applicant.tel">
+                <mdb-input size="3" basic class="mb-4" v-model="applicant.tel" disabled>
                   <span class="input-group-text" slot="prepend">Tel:</span>
                 </mdb-input>
-                <mdb-input size="3" basic class="mb-4" v-model="applicant.line">
+                <mdb-input size="3" basic class="mb-4" v-model="applicant.line" disabled>
                   <span class="input-group-text" slot="prepend">Line:</span>
                 </mdb-input>
 
@@ -53,29 +53,29 @@
             </mdb-card-title>
             <mdb-card-body>
               <section class="preview">
-                <mdb-input basic aria-label="First name" v-model="applicant.first_name">
+                <mdb-input basic aria-label="First name" v-model="applicant.first_name" disabled>
                   <span class="input-group-text" slot="prepend">ชื่อ-นามสกุล:</span>
-                  <mdb-input noWrapper aria-label="Last name" v-model="applicant.last_name"/>
+                  <mdb-input noWrapper aria-label="Last name" v-model="applicant.last_name" disabled/>
                 </mdb-input>
               </section>
               <br>
-              <mdb-input size="3" basic class="mb-4" v-model="applicant.birthDate">
+              <mdb-input size="3" basic class="mb-4" v-model="applicant.birthDate" disabled>
                 <span class="input-group-text" slot="prepend">วัน/เดือน/ปีเกิด:</span>
               </mdb-input>
-              <mdb-input size="4" basic class="mb-4" v-model="applicant.sex">
+              <mdb-input size="4" basic class="mb-4" v-model="applicant.sex" disabled>
                 <span class="input-group-text" slot="prepend">เพศ:</span>
               </mdb-input>
-              <mdb-input type="textarea" basic v-model="applicant.address">
+              <mdb-input type="textarea" basic v-model="applicant.address" disabled>
                 <span class="input-group-text" slot="prepend">ที่อยู่:</span>
               </mdb-input>
               <br>
-              <mdb-input size="4" basic class="mb-4" v-model="applicant.university">
+              <mdb-input size="4" basic class="mb-4" v-model="applicant.university" disabled>
                 <span class="input-group-text" slot="prepend">มหาวิทยาลัย:</span>
               </mdb-input>
-              <mdb-input size="4" basic class="mb-4" v-model="applicant.faculty">
+              <mdb-input size="4" basic class="mb-4" v-model="applicant.faculty" disabled>
                 <span class="input-group-text" slot="prepend">คณะ:</span>
               </mdb-input>
-              <mdb-input size="4" basic class="mb-4" v-model="applicant.major">
+              <mdb-input size="4" basic class="mb-4" v-model="applicant.major" disabled>
                 <span class="input-group-text" slot="prepend">สาขาวิชา:</span>
               </mdb-input>
             </mdb-card-body></mdb-card>
@@ -89,19 +89,19 @@
                 </mdb-view>
               </mdb-card-title>
               <mdb-card-body>
-                <mdb-input size="5" basic class="mb-1" v-model="applicant.position">
+                <mdb-input size="5" basic class="mb-1" v-model="applicant.position" disabled>
                   <span class="input-group-text" slot="prepend">ตำแหน่ง:</span>
                 </mdb-input>
                 <br>
-                <mdb-input type="textarea" basic v-model="applicant.time_work">
+                <mdb-input type="textarea" basic v-model="applicant.time_work" disabled>
                   <span class="input-group-text" slot="prepend">ระยะเวลาฝึกงาน:</span>
                 </mdb-input>
                 <br>
-                <mdb-input size="5" basic class="mb-1" v-model="applicant.name">
+                <mdb-input size="5" basic class="mb-1" v-model="applicant.name" disabled>
                   <span class="input-group-text" slot="prepend">ชื่อพี่เลี้ยง:</span>
                 </mdb-input>
                 <br>
-                <mdb-input size="5" basic class="mb-1" v-model="applicant.positions">
+                <mdb-input size="5" basic class="mb-1" v-model="applicant.positions" disabled>
                   <span class="input-group-text" slot="prepend">ตำแหน่งพี่เลี้ยง:</span>
                 </mdb-input>
               </mdb-card-body></mdb-card>
