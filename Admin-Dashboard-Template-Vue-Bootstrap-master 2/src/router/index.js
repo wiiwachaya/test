@@ -7,6 +7,7 @@ import Task from '../view/Task'
 import Calendar from '../view/Calendar'
 import DaySpanVuetify from 'dayspan-vuetify'
 import Test from '../view/Test'
+import Edit from '../view/Edit'
 
 Vue.use(DaySpanVuetify, {
   // options is vue definition, the resulting reactive component is stored in components as this.$dayspan or Vue.$dayspan
@@ -62,6 +63,12 @@ export default new Router({
       name: 'Test',
       props: { page: 6 },
       component: Test
+    },
+    {
+      path: '/edit',
+      name: 'edit',
+      props: { page: 7 },
+      component: Edit
     }
   ]
 })
