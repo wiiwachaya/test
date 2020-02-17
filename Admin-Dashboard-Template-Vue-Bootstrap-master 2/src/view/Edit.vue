@@ -195,7 +195,7 @@ export default {
         university: 'มหาลัยราชภัฎ',
         faculty: 'วิทยาศาสตร์',
         major: 'การโปรแกรม',
-        position: 'Front-end Developerท',
+        position: 'Front-end Developer',
         name: 'aey rajcharin',
         positions: 'Tech Manager',
         time_work: '4 พ.ย.62 - 21ก.พ.63',
