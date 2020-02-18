@@ -17,7 +17,7 @@
             <mdb-modal-title>Modal title</mdb-modal-title>
           </mdb-modal-header>
           <mdb-modal-body>
-            <mdb-modal-body class="mx-3 grey-text" style="text-align: start">
+            <mdb-modal-body class="sm-3 grey-text" style="text-align: start">
             <mdb-card style="background-color: #3D5A80">
               <mdb-card-body>
                 <mdb-container>
