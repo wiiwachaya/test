@@ -3,7 +3,6 @@
     <mdb-row>
       <mdb-col><h1>ผู้ติดต่อ</h1></mdb-col>
       <mdb-col></mdb-col>
-      <mdb-col></mdb-col>
       <mdb-col col="2" style="text-align: end">
         <mdb-btn-toolbar style="text-align: end">
           <mdb-btn-group class="mr-2">
