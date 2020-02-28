@@ -6,7 +6,6 @@ import Profile from '../view/Profile'
 import Task from '../view/Task'
 import Calendar from '../view/Calendar'
 import DaySpanVuetify from 'dayspan-vuetify'
-import Test from '../view/Test'
 import Edit from '../view/Edit'
 
 Vue.use(DaySpanVuetify, {
@@ -57,12 +56,6 @@ export default new Router({
       name: 'Task',
       props: { page: 4 },
       component: Task
-    },
-    {
-      path: '/test',
-      name: 'Test',
-      props: { page: 6 },
-      component: Test
     },
     {
       path: '/edit',

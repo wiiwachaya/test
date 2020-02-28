@@ -38,9 +38,6 @@
         <router-link to="/profile" @click.native="activeItem = 5">
           <mdb-list-group-item :action="true" :class="activeItem === 5 && 'active'"><mdb-icon icon="user" class="mr-3"/>โปร์ไฟล์</mdb-list-group-item>
         </router-link>
-        <router-link to="/test" @click.native="activeItem = 6">
-          <mdb-list-group-item :action="true" :class="activeItem === 6 && 'active'"><mdb-icon icon="user" class="mr-3"/>ทดสอบ</mdb-list-group-item>
-        </router-link>
       </mdb-list-group>
     </div>
     <!-- /Sidebar  -->

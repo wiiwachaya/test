@@ -1,5 +1,6 @@
 <template>
   <div>
+    <mdb-container>
     <div class="input-group md-form form-sm form-1 pl-0">
       <div class="input-group-prepend">
         <span class="input-group-text cyan lighten-2" id="basic-text1">
@@ -69,6 +70,7 @@
       </mdb-card>
       </mdb-btn>
     </mdb-btn-group>
+    </mdb-container>
     </div>
 </template>
 

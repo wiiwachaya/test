@@ -3,7 +3,6 @@
     <mdb-row>
       <mdb-col><h1>ผู้ติดต่อ</h1></mdb-col>
       <mdb-col></mdb-col>
-      <mdb-col></mdb-col>
       <mdb-col col="2" style="text-align: end">
         <mdb-btn-toolbar style="text-align: end">
           <mdb-btn-group class="mr-2">
@@ -16,7 +15,68 @@
           <mdb-modal-header style="background-color: #3D5A80 ; color: white">
             <mdb-modal-title>Modal title</mdb-modal-title>
           </mdb-modal-header>
-          <mdb-modal-body>...</mdb-modal-body>
+          <mdb-modal-body>
+            <mdb-modal-body class="sm-3 grey-text" style="text-align: start">
+            <mdb-card style="background-color: #3D5A80">
+              <mdb-card-body>
+                <mdb-container>
+                  <mdb-row class="justify-content-start">
+                     <mdb-col col="5">
+                       <label style="color: white">Name Surname</label>
+                       <label style="color: white">Nickname</label>
+                  </mdb-col>
+                     <mdb-col col="9">
+                       <mdb-input style="background-color: #ffffff">
+                  <span class="input-group-text md-addon" slot="prepend" style="color: #3D5A80">ตำแหน่ง:</span>
+                </mdb-input>
+                  </mdb-col>
+                  </mdb-row>
+                     <mdb-row class="justify-content-center">
+                      <mdb-col col="6">
+                         <label style="color: white">ข้อมูลการติดต่อ:</label>
+                    <mdb-input style="background-color: #ffffff">
+                  <span class="input-group-text md-addon" slot="prepend" style="color: #3D5A80">Email:email</span>
+                </mdb-input>
+                 <mdb-input style="background-color: #ffffff">
+                  <span class="input-group-text md-addon" slot="prepend" style="color: #3D5A80">Tel:000-000-0</span>
+                </mdb-input>
+                 <mdb-input style="background-color: #ffffff">
+                  <span class="input-group-text md-addon" slot="prepend" style="color: #3D5A80">Line:xxxxx</span>
+                </mdb-input>
+                  </mdb-col>
+                    <mdb-col col="6">
+                       <label style="color: white">งานที่รับผิดชอบ:</label>
+                        <mdb-input style="background-color: #ffffff">
+                  <span class="input-group-text md-addon" slot="prepend" style="color: #3D5A80"></span>
+                </mdb-input>
+                 <mdb-input style="background-color: #ffffff">
+                  <span class="input-group-text md-addon" slot="prepend" style="color: #3D5A80"></span>
+                </mdb-input>
+                 <mdb-input style="background-color: #ffffff">
+                  <span class="input-group-text md-addon" slot="prepend" style="color: #3D5A80"></span>
+                </mdb-input>
+                  </mdb-col>
+                  </mdb-row>
+                     <mdb-row class="justify-content-end">
+                  </mdb-row>
+                      <mdb-row class="justify-content-around">
+                       <mdb-col col="12">
+                        <mdb-input
+                    type="textarea"
+                    outline
+                    wrapperClass="custom-purple-border"
+                    placeholder="คำอธิบาย"
+                    style="background-color: white"
+                  />
+                  </mdb-col>
+                  </mdb-row>
+                    <mdb-row class="justify-content-between">
+                 </mdb-row>
+                 </mdb-container>
+               </mdb-card-body>
+            </mdb-card>
+          </mdb-modal-body>
+            </mdb-modal-body>
           <mdb-modal-footer style="background-color: #3D5A80">
             <mdb-btn color="danger" @click.native="modal = false">Close</mdb-btn>
             <mdb-btn color="primary">Save changes</mdb-btn>
@@ -276,5 +336,7 @@ export default {
 </script>
 
 <style scoped>
-
+.modal-content {
+  width: 100%;
+}
 </style>
